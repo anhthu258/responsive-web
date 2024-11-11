@@ -19,14 +19,15 @@
 }
 
 #logo{
-    width: 1.563rem;
+    width: 0.938rem;
 }
 
 .icon{
     width: 1.875rem;
+    margin: 0.625rem;
 }
 
-header section{
+header section{                         /*Definere placering af logo og search-icon, dermed baggrundsfarve*/
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -34,7 +35,7 @@ header section{
     background: var(--black);
 }
 
-header .navbar {                    /*Bestemt baggrundsfarve for navigationsbar*/
+header .navbar {                         /*Bestemt baggrundsfarve for navigationsbar*/
     background-color: var(--orange);     /*skal ændre til den rigtige farve*/ /*MANGLER*/
 }
 
@@ -92,4 +93,48 @@ header::after {                     /*Fjern floats efter header content*/
     content: "";
     display: table;
     clear: both;
+}
+
+#wrapper {
+    min-height: 100%;               /*Definere kontents højde, dette sørge for en sticky footer der reagere med kontentet, dermed forbliver den i bunden af siden under alle forhold*/
+    display: flex;
+    flex-direction: column;
+}
+
+footer {                            /*Styling for footer*/
+    background-color: var(--light-grey);
+    color: var(--black);
+    text-align: center;
+    padding: 1.25rem;
+    margin-top: 3.125rem;
+    height: 21.875rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+footer img{                         /*Styling for logoet under footer*/
+    padding-bottom: 2%;
+    width: 25rem;
+}
+
+footer nav ul {                     /*Styling footers navigationsbar*/
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+footer nav ul li {                  /*Styling for list items under footer navigationsbar*/
+    display: inline-block; 
+    margin-right: 0.938rem; 
+}
+
+footer nav ul li:last-child {       /* Fjerne margin for den sidste list item i footer*/
+    margin-right: 0;
+}
+
+footer nav ul li a {                /* Style for links i footer navigationsbar */
+    text-decoration: none;
+    color: var(--dark-grey);
 }
