@@ -1,0 +1,29 @@
+:root{                              /*Definere css variables for farver for nemmere tilgang*/ /*MANGLER*/
+    --white: #ffffff;
+    --orange: #ff9327;
+    --dark-grey: #222222;
+    --black: #000000;
+    --light-grey: #cecfca;
+}
+
+#konstruktion {                     /*Definere layout for construction*/
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#konstruktion h2 {                  /*Styling for main heading h1 i construction*/
+    margin: 5%;
+    color: var(--orange);
+    font-size: 3.125rem;
+}
+
+#konstruktion a{                     /*Styling for links i construction*/
+    text-decoration: none;
+    color: var(--white);
+    font-size: 2.813rem;
+    background-color: var(--orange);
+    padding: 0.625rem;
+}
