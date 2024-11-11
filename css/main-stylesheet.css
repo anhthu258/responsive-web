@@ -1,4 +1,95 @@
-*{
+*{                              /*Reset alt default setting for margin og padding, dermed definere alle box-sizing til border-box*/
     margin: 0;
     padding: 0;
+    box-sizing:border-box;
+    font-size: 16px;
+}
+
+:root{                          /*Definere css variables for farver for nemmere tilgang*/ /*MANGLER*/
+    --white: #ffffff;
+    --orange: #ff9327;
+    --dark-grey: #222222;
+    --black: #000000;
+    --light-grey: #cecfca;
+}
+
+#header{                            /*Bestemt layout for header med brug af flexbox*/
+    display: flex;
+    justify-content: space-between;
+}
+
+#logo{
+    width: 1.875rem;
+}
+
+.icon{
+    width: 1.875rem;
+}
+
+header section{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--black);
+}
+
+header .navbar {                    /*Bestemt baggrundsfarve for navigationsbar*/
+    background-color: var(--orange);     /*skal ændre til den rigtige farve*/ /*MANGLER*/
+}
+
+header .navbar ul{                  /*Styling af navigationsbar*/
+    list-style: none;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+header .navbar ul li{               /*Definere position af navigationsbar listitem*/
+    position: relative;
+}
+
+header .navbar ul li a{             /*Styling af links i navigationsbar*/
+    text-decoration: none;
+    font-size: 1.25rem;
+    padding: 1.125rem;
+    color: black;
+    display: block;
+    background: var(--orange);
+}
+
+header .navbar ul li a:hover{       /*Styling af navigationsbar under hover tilstand*/
+    background: var(--dark-grey);
+    color: var(--orange);
+}
+
+header .navbar ul li ul{            /*Styling af dropdown menu i navbar*/
+    position: absolute;
+    left: 0;
+    width: 100%;                    /*Definere at den skal udfylde hele siden*/
+    background: var(--orange);
+    display: none;
+    z-index: 10;                    /*Styrer stablingrækkefølge højere værdi ligger øverst, i denne tilfælde ligger alt under ul øverst for alle andre elementer*/
+}
+
+header .navbar ul li ul li{         /*Styling af list item i dropdown menu*/
+    width: 100%;
+    border-top: 0.5px solid var(--dark-grey);
+}
+
+header .navbar ul li ul li ul{      /*Styling af nested dropdown menu*/
+    left: 12.5rem;
+    top: 0;
+}
+
+header .navbar ul li:focus-within > ul,
+header .navbar ul li:hover > ul{     /*Definere display af dropdown menu på hover eller fokus*/
+    display: block;
+    z-index: 10;                     /*Styrer stablingrækkefølge højere værdi ligger øverst, i denne tilfælde ligger alt under ul øverst for alle andre elementer*/
+}
+
+header::after {                     /*Fjern floats efter header content*/
+    content: "";
+    display: table;
+    clear: both;
 }
