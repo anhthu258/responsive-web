@@ -101,6 +101,34 @@ header::after {                     /*Fjern floats efter header content*/
     flex-direction: column;
 }
 
+main{
+    flex: 1;                        /*Definere spacen af main*/
+}
+
+#top{                             /*Styling for fixed sektionen i højre bund af siden*/
+    color: var(--white);
+    background-color: var(--orange);
+    position: fixed;
+    bottom: 0;
+    right: 50px;
+    padding: 20px;
+    font-size: 18px;
+    z-index: 9;
+}
+
+#top a{                           /*Styling for links i top*/
+    color: var(--black);
+    text-decoration: none;
+    font-family: serif;
+    font-weight: 300;
+    font-style: bold;
+}
+
+top :hover{
+    background: var(--dark-grey);
+    color: var(--orange);
+}
+
 footer {                            /*Styling for footer*/
     background-color: var(--light-grey);
     color: var(--black);
