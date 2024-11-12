@@ -440,12 +440,3 @@ body {
     background-size: cover;
     background-position: center;
 }
-
-.center-contain {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 10rem; /* Full viewport height */
-    background-size: cover;
-    background-position: center;
-}
