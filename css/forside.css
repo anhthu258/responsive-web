@@ -1,7 +1,13 @@
-html, body{
+html, body{                                         /*Posisition af baggrundsbillede*/
     background-image: url(/img/mockupweb.png);
     background-size: cover;
     background-position: top center;
     background-repeat: no-repeat;
     height: 200rem;
 }
+
+main{                                               /*Definere spacen af main*/
+    .parent{
+        display: grid;
+    }
+    }
