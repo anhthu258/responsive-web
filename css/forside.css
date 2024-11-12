@@ -1,3 +1,18 @@
+@font-face {
+    font-family:big-noodle;
+    src: url(/fonts/big-noodle.ttf)
+    }
+
+@font-face {
+    font-family:big-noodle-italic;
+    src: url(/fonts/big-noodle-italic.ttf)
+}
+
+@font-face {
+    font-family: blank-river;
+    src: url(/fonts/blank-river.ttf);
+}
+
 html, body{                                         /*Posisition af baggrundsbillede*/
     background-image: url(/img/mockupweb.png);
     background-size: cover;
@@ -11,3 +26,13 @@ main{                                               /*Definere spacen af main*/
         display: grid;
     }
     }
+
+    @media only screen and (max-width: 400px ){     /*til responsive telefon*/
+        html, body{
+            display: flex;
+        }
+        }
+    
+        @media only screen and (min-width: 600px){  /*til responsive tablet*/
+    
+        }
