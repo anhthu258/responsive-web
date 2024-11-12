@@ -1,3 +1,18 @@
+@font-face {
+    font-family:big-noodle;
+    src: url(/fonts/big-noodle.ttf)
+    }
+
+@font-face {
+    font-family:big-noodle-italic;
+    src: url(/fonts/big-noodle-italic.ttf)
+}
+
+@font-face {
+    font-family: blank-river;
+    src: url(/fonts/blank-river.ttf);
+}
+
 html, body{                                         /*Posisition af baggrundsbillede*/
     background-image: url(/img/mockupweb.png);
     background-size: cover;
