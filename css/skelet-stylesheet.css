@@ -11,6 +11,7 @@
     --dark-grey: #222222;
     --black: #000000;
     --light-grey: #cecfca;
+    --mid-white: #f4f4f4
 }
 
 #header{                            /*Bestemt layout for header med brug af flexbox*/
@@ -36,7 +37,7 @@ header section{                         /*Definere placering af logo og search-i
 }
 
 header .navbar {                         /*Bestemt baggrundsfarve for navigationsbar*/
-    background-color: var(--orange);     /*skal ændre til den rigtige farve*/ /*MANGLER*/
+    background-color: var(--orange);
 }
 
 header .navbar ul{                  /*Styling af navigationsbar*/
@@ -48,12 +49,13 @@ header .navbar ul{                  /*Styling af navigationsbar*/
 
 header .navbar ul li{               /*Definere position af navigationsbar listitem*/
     position: relative;
+    padding: 1.5 1.5rem;
 }
 
 header .navbar ul li a{             /*Styling af links i navigationsbar*/
     text-decoration: none;
     font-size: 1.25rem;
-    padding: 1.125rem;
+    padding: 1.5rem;
     color: black;
     display: block;
     background: var(--orange);
@@ -101,10 +103,6 @@ header::after {                     /*Fjern floats efter header content*/
     flex-direction: column;
 }
 
-main{
-    flex: 1;                        /*Definere spacen af main*/
-}
-
 #top{                             /*Styling for fixed sektionen i højre bund af siden*/
     color: var(--white);
     background-color: var(--orange);
@@ -122,11 +120,6 @@ main{
     font-family: serif;
     font-weight: 300;
     font-style: bold;
-}
-
-top :hover{
-    background: var(--dark-grey);
-    color: var(--orange);
 }
 
 footer {                            /*Styling for footer*/
