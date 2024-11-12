@@ -11,6 +11,16 @@
     --dark-grey: #222222;
     --black: #000000;
     --light-grey: #cecfca;
+    --mid-white: #f4f4f4
+}
+
+html, body{
+    background-image: url(/img/mockupweb.png);
+    background-size: auto;
+    background-position: top center;
+    background-repeat: no-repeat;
+    height: 200rem;
+    
 }
 
 #header{                            /*Bestemt layout for header med brug af flexbox*/
@@ -101,8 +111,10 @@ header::after {                     /*Fjern floats efter header content*/
     flex-direction: column;
 }
 
-main{
-    flex: 1;                        /*Definere spacen af main*/
+main{                               /*Definere spacen af main*/
+.parent{
+    display: grid;
+}
 }
 
 #top{                             /*Styling for fixed sektionen i højre bund af siden*/
@@ -140,6 +152,7 @@ footer {                            /*Styling for footer*/
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    
 }
 
 footer img{                         /*Styling for logoet under footer*/
@@ -165,4 +178,10 @@ footer nav ul li:last-child {       /* Fjerne margin for den sidste list item i 
 footer nav ul li a {                /* Style for links i footer navigationsbar */
     text-decoration: none;
     color: var(--dark-grey);
+}
+
+@media (max-width: 400px ){ /*til responsive telefon*/
+html, body{
+    display: flex;
+}
 }
