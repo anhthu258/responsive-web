@@ -11,3 +11,13 @@ main{                                               /*Definere spacen af main*/
         display: grid;
     }
     }
+
+    @media only screen and (max-width: 400px ){     /*til responsive telefon*/
+        html, body{
+            display: flex;
+        }
+        }
+    
+        @media only screen and (min-width: 600px){  /*til responsive tablet*/
+    
+        }
