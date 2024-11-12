@@ -14,15 +14,6 @@
     --mid-white: #f4f4f4
 }
 
-html, body{
-    background-image: url(/img/mockupweb.png);
-    background-size: auto;
-    background-position: top center;
-    background-repeat: no-repeat;
-    height: 200rem;
-    
-}
-
 #header{                            /*Bestemt layout for header med brug af flexbox*/
     display: flex;
     justify-content: space-between;
