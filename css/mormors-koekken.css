@@ -442,3 +442,17 @@ body {
     background-size: cover;
     background-position: center;
 }
+
+/* Media query for mobile screens */
+@media (max-width: 768px) {
+    .overlay-image {
+        max-width: 90%; /* Reduces the image width on mobile */
+        padding-left: 3rem;
+    }
+
+    @media (max-width: 1024px) and (min-width: 769px) {
+    .overlay-image {
+            max-width: 70%; /* Slightly smaller width on tablet screens */
+            padding-left: 5rem;
+        }
+    }
