@@ -12,18 +12,6 @@
     --black: #000000;
     --light-grey: #cecfca;
     --mid-white: #f4f4f4;
-
-    /* Variable der gøre kodening af burgermenuen bliver mere responsive */
-    --bar-width: 60px;                  /* Definere breden af burgermenuen*/
-    --bar-height: 8px;                  /* Definere højden af burgermenuen*/
-    --hamburger-gap: 6px;               /* Ved at definere margin ville den skubbe andre variables under*/
-    --foreground: var(--orange);
-    --background: var(--dark-grey);
-    --hamburger-margin: 8px;
-    --animation-timing: 200ms ease-in-out;
-     /* simpel math - højde er lige med 3x bar height og 2x vores gap. Calc variable regner denne regnestyk ud for os */
-    --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
-
 }
 
 #header{                            /*Bestemt layout for header med brug af flexbox*/
@@ -39,84 +27,6 @@
 .icon{
     width: 1.875rem;
     margin: 0.625rem;
-}
-
-/* CSS TIL BURGER MENUEN */
-
-.burger-menu{                           /* laver de 3 strejer */
-    --x-width: calc(var(--hamburger-height) * 1.41421356237);        /* Denne kode regner længden af linjerne når checkboxen er krydset af ved brug af trekantsberegning. Tallet det er ganget med er bare √2*/
-    display: flex;
-    flex-direction: column;
-    gap: var(--hamburger-gap);
-    width: max-content;
-    position: absolute;
-    top: var(--hamburger-margin);
-    left: var(--hamburger-margin);
-    z-index: 2;                                                     /* Sørger for at burgermenuen er på toppen af sidebar */
-    cursor: pointer;
-    margin-top: 40%;                                                /* Placere burgermenu under logoet */
-}
-
-.burger-menu:has(input:checked){        /* Ændring af farve på burgermenu når den er checked */
-    --foreground: var(--dark-grey);
-    --background: var(--orange);
-}
-
-.burger-menu::before,                   /* Target de 3 linjer som burgermenuen har */
-.burger-menu::after,                    /* Target de 3 linjer som burgermenuen har */
-.burger-menu input{                     /* Target checkboxen */
-    content: "";
-    width: var(--bar-width);
-    height: var(--bar-height);
-    background-color: var(--foreground);
-    border-radius: 9999px;
-    transform-origin: left center;
-    /* Denne linje animere transition når man klicker på checkboxen */
-    transition: opacity var(--animation-timing), width var(--animation-timing),
-    rotate var(--animation-timing), translate var(--animation-timing),
-    background-color var(--animation-timing);
-}
-
-.burger-menu input{                     /* Fjerner default checkbox */
-    appearance: none;
-    padding: 0;
-    margin: 0;
-    outline: none;
-    pointer-events: none;               /* Gøre sådan at man ikke kan klicke på checkboxen. Dette er gjort pga. alt interation med checkbox skal ske i gennem label. Koden har gøre at man nu kan tryk hvor som helst på .burger-menu ville man check og uncheck ens checkbox*/
-}
-
-/* Forklaring af hvad linjen nedenfor target: Hvis burgermenu har en input der er checked, hvis ja target before elementet af burgermenuen */
-.burger-menu:has(input:checked)::before{ /* css til krydset når checkboxen er checked */
-    rotate: 45deg;
-    width: var(--x-width);
-    translate: 0 calc(var(--bar-height) / -2); /* Regner translate for y-position, og da vi ville have den som halvdel af baren ville det være division med 2 ( x-position er 0 ) */
-}
-
-.burger-menu:has(input:checked)::after{
-    rotate: -45deg;
-    width: var(--x-width);
-    translate: 0 calc(var(--bar-height) / 2);
-}
-
-.burger-menu input:checked{
-    opacity: 0;
-    width: 0;
-}
-
-.sidebar{
-    transition: translate var(--animation-timing);
-    translate: -100%;
-    padding: 0.5rem 1rem;
-    padding-top: calc(var(--hamburger-height) + var(--hamburger-margin) + 1rem);
-    background-color: var(--foreground);
-    color: var(--background);
-    max-width: 10rem;
-    min-height: 100vh;
-}
-
-/* Forklaring af hvad linjen nedenfor target: hvis vi har en burgermenu der har en input som er checked ville sidebar blive selected*/
-.burger-menu:has(input:checked) + .sidebar{
-    translate: 0;
 }
 
 header section{                         /*Definere placering af logo og search-icon, dermed baggrundsfarve*/
@@ -187,6 +97,32 @@ header::after {                     /*Fjern floats efter header content*/
     content: "";
     display: table;
     clear: both;
+}
+
+nav ul.sub-menus{
+	height: auto;
+	overflow: hidden;
+	width: 170px;
+	background: #444444;
+	position: absolute;
+	z-index: 10;
+	display: none;
+}
+nav ul.sub-menus li {
+	display: block;
+	text-align: left;
+	width: 100%;
+}
+nav ul.sub-menus a {
+	color: var(--black);
+	font-size: 1.125rem;
+}
+nav li:hover ul.sub-menus {
+	display: block
+}
+nav ul.sub-menus a:hover{
+	background: var(--dark-grey);
+	color: var(--white);
 }
 
 #wrapper {
