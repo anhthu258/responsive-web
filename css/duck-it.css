@@ -1,0 +1,61 @@
+*{                                      /*Reset alt default setting for margin og padding, dermed definere alle box-sizing til border-box*/
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+    font-size: 16px;
+}
+
+:root{                                  /*Definere css variables for farver for nemmere tilgang*/ /*MANGLER*/
+    --white: #ffffff;
+    --red: #8b0000;
+    --dark-grey: #222222;
+    --black: #000000;
+    --light-grey: #cecfca;
+    --mid-white: #f4f4f4
+}
+
+main {
+    display: grid;
+    place-items: center;                /* Centrerer både horisontalt og vertikalt */
+    min-height: 50vh;
+}
+
+header .navbar {                         /*Bestemt baggrundsfarve for navigationsbar*/
+    background-color: var(--red);
+    font-family:blank-river;
+}
+
+header .navbar ul li a{                 /*Styling af links i navigationsbar*/
+    color: var(--white);
+    background: var(--red);
+}
+
+header .navbar ul li a:hover{           /*Styling af navigationsbar under hover tilstand*/
+    background: var(--dark-grey);
+    color: var(--white);
+}
+
+#top{                                   /*Styling for fixed sektionen i højre bund af siden*/
+    background-color: var(--red);
+}
+
+#top a{
+    color: var(--white);
+}
+
+#circle {
+    width: 12.5rem;
+    height: 12.5rem;
+    background-color: var(--light-grey);
+    border-radius: 50%;
+    display: flex;                      /* Placere billedet i center */
+    align-items: center;
+    justify-content: center;
+}
+
+#circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;                  /* Bevarer billedets proportioner, mens det fylder hele cirklen */
+    overflow: visible;                  /* Sørge for at billedet kan flyde ud af cirklen*/
+}

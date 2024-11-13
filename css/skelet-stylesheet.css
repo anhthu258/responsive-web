@@ -117,7 +117,7 @@ header::after {                     /*Fjern floats efter header content*/
 }
 
 #top a{                           /*Styling for links i top*/
-    color: var(--black);
+    color: var(--white);
     text-decoration: none;
     font-family: serif;
     font-weight: 300;
