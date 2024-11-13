@@ -13,12 +13,54 @@
     src: url(/fonts/blank-river.ttf);
 }
 
-html, body{                                         /*Posisition af baggrundsbillede*/
-    background-image: url(/img/background-empty.png);
+:root{                                                                  /*Definere css variables for farver for nemmere tilgang*/
+    --white: #ffffff;
+    --orange: #ff9327;
+    --dark-grey: #222222;
+    --black: #000000;
+    --light-grey: #cecfca;
+    --mid-white: #f4f4f4;
+}
+
+html, body{                                                             /*Posisition af baggrundsbillede*/
+    background-image: url(/img/forsiden/background-empty.png);
     background-size: cover;
     background-position: top center;
     background-repeat: no-repeat;
     height: 190rem;
+}
+
+#tilbud{
+    position: absolute;
+    top: 40%;
+    left: 4%;
+}
+
+#tilbud h2{
+    font-family: big-noodle-italic;
+    color: var(--white);
+    font-size: 12.5rem;
+    position: relative;                                                 /* Sørger for, at h3 positioneres i forhold til h2 */
+    z-index: 1;                                                         /* Sikrer, at h2 er bag h3 */
+}
+
+#tilbud h3{
+    font-family: blank-river;
+    color: var(--orange);
+    font-size: 6.25rem;
+    position: absolute;
+    top: 8rem;
+    left: 18.5rem;
+    z-index: 2;                                                         /* Sikrer, at h3 vises over h2 */
+    rotate: -25deg;
+}
+
+#tilbud p{
+    color: var(--white);
+    background: rgba(211, 211, 211, 0.5);
+    width: max-content;
+    font-size: 3.125rem;
+    padding: 1%;
 }
 
 main{                                               /*Definere spacen af main*/
