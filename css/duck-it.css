@@ -5,13 +5,12 @@
     font-size: 16px;
 }
 
-:root{                                  /*Definere css variables for farver for nemmere tilgang*/ /*MANGLER*/
+:root{                                  /*Definere css variables for farver for nemmere tilgang*/
     --white: #ffffff;
     --red: #8b0000;
     --dark-grey: #222222;
     --black: #000000;
     --light-grey: #cecfca;
-    --mid-white: #f4f4f4
 }
 
 article {
@@ -58,4 +57,86 @@ header .navbar ul li a:hover{           /*Styling af navigationsbar under hover 
     height: 100%;
     object-fit: cover;                  /* Bevarer billedets proportioner, mens det fylder hele cirklen */
     overflow: visible;                  /* Sørge for at billedet kan flyde ud af cirklen*/
+}
+
+#menu {
+    display: flex;  
+    flex-wrap: wrap;                    /* Sørger for, at sektionerne bryder op i flere rækker */
+    gap: 2rem;
+    justify-content: space-between;
+}
+
+#menu section img{
+    width: 18.75rem;
+    height: 18.75rem;
+    object-fit: cover;
+}
+
+.content {
+    display: flex;
+    gap: 1rem;
+    width: 45%;
+    margin: auto;
+    border-radius: 5%;
+    background: var(--light-grey);
+}
+
+.content img {
+    margin: 5%;
+    width: 40%;
+    object-fit: cover;
+    border-radius: 2%;
+    overflow: hidden;
+}
+
+.content article {
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 60%;
+}
+
+.content h3 {
+    padding: 1rem;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.content p {
+    padding: 0 1rem 1rem 1rem;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.order-btn {
+    padding: 10px 20px;
+    margin: 6.5rem 1rem 0;
+    font-size: 1.2rem;
+    background-color: var(--red);
+    color: var(--white);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.order-btn:hover {
+    background-color: var(--dark-grey);
+}
+
+@media screen and (max-width: 768px) {
+    #menu {
+        flex-direction: column;        /* Når skærmen er smal, ændres layoutet til én kolonne */
+        align-items: center;           /* Centrerer sektionerne på små skærme */
+    }
+
+    .content {
+        width: 80%;                    /* Gør sektionerne bredere på små skærme */
+    }
+
+    .content img {
+        width: 100%;                   /* Gør billederne responsivt */
+        margin-bottom: 1rem;           /* Afstand mellem billede og tekst */
+    }
 }
