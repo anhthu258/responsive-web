@@ -1,42 +1,104 @@
 @font-face {
-    font-family:big-noodle-italic;
-    src: url(/fonts/big-noodle-italic.ttf);
-
     font-family: bubblegum;
-    src: url(/fonts/bubblegum.ttf);
+    src: url(/fonts/bubblegum.ttf)
 }
-
+@font-face {
+    font-family: big-noodle;
+    src: url(/fonts/big-noodle-italic.ttf);
+}
 *{                              /*Reset alt default setting for margin og padding, dermed definere alle box-sizing til border-box*/
     margin: 0;
     padding: 0;
     box-sizing:border-box;
     font-size: 16px;
-}
+} 
+
 body{
     background-image: url(/img/popsicle/Tegnebræt\ 1\ kopier.png);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: top center;
+    background-position: center;
+    background-color: #daebde;
+}
+.head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: bubblegum;
+}
+
+.head img{
+height: 3rem;
+}
+
+h1{
+    padding-right: 46%;
+    font-size: 3rem;
+    color:#fcecdc;
+    text-shadow:#ffbacd ;
+    padding-bottom: 4.5%;
+    padding-top: 1.5%;
+    }
+h2{
+    padding-top: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+}
+.ramme{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-top: 2rem;
+}
+
+.ramme img{
+    height: auto;
+    padding: 2%;
+
+}
+
+@media (max-width: 1560px){
+
+body{
+    background-image: url(/img/popsicle/Tegnebræt\ 1\ kopier.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top right;
     background-color: #daebde;
 }
 
+.ramme{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-top: 2rem;
+}
+.ramme img{
+    padding: 2%;
+
+}
+
+}
 @media (max-width: 1360px){
     *{                              /*Reset alt default setting for margin og padding, dermed definere alle box-sizing til border-box*/
         margin: 0;
         padding: 0;
         box-sizing:border-box;
         font-size: 16px;
-    }
+    } 
 
     body{
-        background-size:auto;
+        background-image: url(/img/popsicle/Tegnebræt\ 1\ kopier.png);
+        background-repeat: no-repeat;
+        background-size: auto;
         background-position: top right;
         background-color: #daebde;
-    }    
-
+    }
     .head{
         display: flex;
-        justify-content: space-between;
         font-family: bubblegum;
         padding-top: 0.5rem;
     }
@@ -46,7 +108,7 @@ body{
     }
 
     h1{
-        padding-right: 5rem;
+        padding-right: 45%;
         font-size: 3rem;
         padding-top: 1.5rem;
         color:#fcecdc;
@@ -58,14 +120,58 @@ body{
         align-items: center;
         justify-content:center;
     }
-    .ramme{
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        padding-top: 2rem;
     }
 
-    .ramme img{
-        height: 14rem;
-    }
-    }
+    @media (max-width: 500px){
+        *{                              /*Reset alt default setting for margin og padding, dermed definere alle box-sizing til border-box*/
+            margin: 0;
+            padding: 0;
+            box-sizing:border-box;
+            font-size: 16px;
+        } 
+    
+        body{
+            background-image: url(/img/popsicle/Tegnebræt\ 1\ kopier.png);
+            background-repeat: no-repeat;
+            background-size: auto;
+            background-position: top right;
+            background-color: #daebde;
+        }
+        .head{
+            display: flex;
+            justify-content: space-between;
+            font-family: bubblegum;
+            padding-top: 0.5rem;
+        }
+    
+        .head img{
+        height: 3rem;
+        }
+    
+        h1{
+            padding-right: 37.5%;
+            font-size: 3rem;
+            padding-top: 1.5rem;
+            color:#fcecdc;
+            text-shadow:#ffbacd ;
+            }
+        h2{
+            padding-top: 3rem;
+            display: flex;
+            align-items: center;
+            justify-content:center;
+        }
+        .ramme{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding-top: 2rem;
+        }
+    
+        .ramme img{
+            height: auto;
+            padding: 2%;
+    
+        }
+        }
