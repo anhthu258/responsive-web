@@ -15,7 +15,7 @@
 }
 
 #konstruktion h2 {                  /*Styling for main heading h1 i construction*/
-    margin: 5%;
+    margin: 2.5rem;
     color: var(--orange);
     font-size: 3.125rem;
 }
@@ -26,4 +26,9 @@
     font-size: 2.813rem;
     background-color: var(--orange);
     padding: 0.625rem;
+}
+
+main img{
+    margin: 0.625rem;
+    width: 10%;
 }

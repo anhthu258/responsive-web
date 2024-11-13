@@ -20,6 +20,7 @@
 }
 
 #logo{
+    padding: 0.938rem;
     width: 0.525rem;
 }
 
@@ -38,6 +39,7 @@ header section{                         /*Definere placering af logo og search-i
 
 header .navbar {                         /*Bestemt baggrundsfarve for navigationsbar*/
     background-color: var(--orange);
+    font-family:blank-river;
 }
 
 header .navbar ul{                  /*Styling af navigationsbar*/
@@ -54,7 +56,7 @@ header .navbar ul li{               /*Definere position af navigationsbar listit
 
 header .navbar ul li a{             /*Styling af links i navigationsbar*/
     text-decoration: none;
-    font-size: 1.25rem;
+    font-size: 1.55rem;
     padding: 1.5rem;
     color: black;
     display: block;
