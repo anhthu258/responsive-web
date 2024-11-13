@@ -115,7 +115,7 @@ nav ul.sub-menus li {
 }
 nav ul.sub-menus a {
 	color: var(--black);
-	font-size: 1.125rem;
+	font-size: 1.25rem;
 }
 nav li:hover ul.sub-menus {
 	display: block
