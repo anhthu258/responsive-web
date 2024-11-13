@@ -5,7 +5,7 @@
     font-size: 16px;
 }
 
-:root{                          /*Definere css variables for farver for nemmere tilgang*/ /*MANGLER*/
+:root{                          /*Definere css variables for farver for nemmere tilgang*/
     --white: #ffffff;
     --orange: #ff9327;
     --dark-grey: #222222;

@@ -5,7 +5,7 @@
     font-size: 16px;
 }
 
-:root{                              /*Definere css variables for farver for nemmere tilgang*/ /*MANGLER*/
+:root{                              /*Definere css variables for farver for nemmere tilgang*/
     --white: #ffffff;
     --orange: #ff9327;
     --dark-grey: #222222;
@@ -13,13 +13,16 @@
     --light-grey: #cecfca;
     --mid-white: #f4f4f4;
 
-    /* Disse variables er med til at hjælpe koden til burger menuen med at være mere responsive længere ned */
-    --bar-width: 3.75rem;              /* Definere breden af burgermenuen*/
-    --bar-height: 0.5rem;              /* Definere højden af burgermenuen*/
-    --burger-menu-gap: 0.375rem;       /* Ved at definere margin ville den skubbe andre variables under*/
-    --burger-menu-margin: 0.5rem;
+    /* Variable der gøre kodening af burgermenuen bliver mere responsive */
+    --bar-width: 60px;                  /* Definere breden af burgermenuen*/
+    --bar-height: 8px;                  /* Definere højden af burgermenuen*/
+    --hamburger-gap: 6px;               /* Ved at definere margin ville den skubbe andre variables under*/
+    --foreground: var(--orange);
+    --background: var(--dark-grey);
+    --hamburger-margin: 8px;
     --animation-timing: 200ms ease-in-out;
-    -o-transform-origin: left center;
+     /* simpel math - højde er lige med 3x bar height og 2x vores gap. Calc variable regner denne regnestyk ud for os */
+    --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
 
 }
 
@@ -38,26 +41,40 @@
     margin: 0.625rem;
 }
 
+/* CSS TIL BURGER MENUEN */
+
 .burger-menu{                           /* laver de 3 strejer */
+    --x-width: calc(var(--hamburger-height) * 1.41421356237);        /* Denne kode regner længden af linjerne når checkboxen er krydset af ved brug af trekantsberegning. Tallet det er ganget med er bare √2*/
     display: flex;
     flex-direction: column;
-    gap: var(--burger-menu-gap);
+    gap: var(--hamburger-gap);
     width: max-content;
     position: absolute;
-    top: var(--burger-menu-margin);
-    left: var(--burger-menu-margin);
-    z-index: 2;                         /* Sørger for at burgermenuen er på toppen af sidebar */
+    top: var(--hamburger-margin);
+    left: var(--hamburger-margin);
+    z-index: 2;                                                     /* Sørger for at burgermenuen er på toppen af sidebar */
     cursor: pointer;
+    margin-top: 40%;                                                /* Placere burgermenu under logoet */
 }
-                                        /* Denne linje animere transition når man klicker på checkboxen */
+
+.burger-menu:has(input:checked){        /* Ændring af farve på burgermenu når den er checked */
+    --foreground: var(--dark-grey);
+    --background: var(--orange);
+}
+
 .burger-menu::before,                   /* Target de 3 linjer som burgermenuen har */
 .burger-menu::after,                    /* Target de 3 linjer som burgermenuen har */
 .burger-menu input{                     /* Target checkboxen */
     content: "";
     width: var(--bar-width);
     height: var(--bar-height);
-    background-color: var(--orange);
-    transition: opacity var(animation-timing);
+    background-color: var(--foreground);
+    border-radius: 9999px;
+    transform-origin: left center;
+    /* Denne linje animere transition når man klicker på checkboxen */
+    transition: opacity var(--animation-timing), width var(--animation-timing),
+    rotate var(--animation-timing), translate var(--animation-timing),
+    background-color var(--animation-timing);
 }
 
 .burger-menu input{                     /* Fjerner default checkbox */
@@ -71,15 +88,35 @@
 /* Forklaring af hvad linjen nedenfor target: Hvis burgermenu har en input der er checked, hvis ja target before elementet af burgermenuen */
 .burger-menu:has(input:checked)::before{ /* css til krydset når checkboxen er checked */
     rotate: 45deg;
+    width: var(--x-width);
+    translate: 0 calc(var(--bar-height) / -2); /* Regner translate for y-position, og da vi ville have den som halvdel af baren ville det være division med 2 ( x-position er 0 ) */
 }
 
 .burger-menu:has(input:checked)::after{
     rotate: -45deg;
+    width: var(--x-width);
+    translate: 0 calc(var(--bar-height) / 2);
 }
 
 .burger-menu input:checked{
     opacity: 0;
     width: 0;
+}
+
+.sidebar{
+    transition: translate var(--animation-timing);
+    translate: -100%;
+    padding: 0.5rem 1rem;
+    padding-top: calc(var(--hamburger-height) + var(--hamburger-margin) + 1rem);
+    background-color: var(--foreground);
+    color: var(--background);
+    max-width: 10rem;
+    min-height: 100vh;
+}
+
+/* Forklaring af hvad linjen nedenfor target: hvis vi har en burgermenu der har en input som er checked ville sidebar blive selected*/
+.burger-menu:has(input:checked) + .sidebar{
+    translate: 0;
 }
 
 header section{                         /*Definere placering af logo og search-icon, dermed baggrundsfarve*/
@@ -90,24 +127,24 @@ header section{                         /*Definere placering af logo og search-i
     background: var(--black);
 }
 
-header .navbar {                         /*Bestemt baggrundsfarve for navigationsbar*/
+header nav {                         /*Bestemt baggrundsfarve for navigationsbar*/
     background-color: var(--orange);
     font-family:blank-river;
 }
 
-header .navbar ul{                  /*Styling af navigationsbar*/
+header nav ul{                  /*Styling af navigationsbar*/
     list-style: none;
     width: 100%;
     display: flex;
     justify-content: space-around;
 }
 
-header .navbar ul li{               /*Definere position af navigationsbar listitem*/
+header nav ul li{               /*Definere position af navigationsbar listitem*/
     position: relative;
     padding: 1.5 1.5rem;
 }
 
-header .navbar ul li a{             /*Styling af links i navigationsbar*/
+header nav ul li a{             /*Styling af links i navigationsbar*/
     text-decoration: none;
     font-size: 1.55rem;
     padding: 1.5rem;
@@ -116,12 +153,12 @@ header .navbar ul li a{             /*Styling af links i navigationsbar*/
     background: var(--orange);
 }
 
-header .navbar ul li a:hover{       /*Styling af navigationsbar under hover tilstand*/
+header nav ul li a:hover{       /*Styling af navigationsbar under hover tilstand*/
     background: var(--dark-grey);
     color: var(--orange);
 }
 
-header .navbar ul li ul{            /*Styling af dropdown menu i navbar*/
+header nav ul li ul{            /*Styling af dropdown menu i navbar*/
     position: absolute;
     left: 0;
     width: 100%;                    /*Definere at den skal udfylde hele siden*/
@@ -130,18 +167,18 @@ header .navbar ul li ul{            /*Styling af dropdown menu i navbar*/
     z-index: 10;                    /*Styrer stablingrækkefølge højere værdi ligger øverst, i denne tilfælde ligger alt under ul øverst for alle andre elementer*/
 }
 
-header .navbar ul li ul li{         /*Styling af list item i dropdown menu*/
+header nav ul li ul li{         /*Styling af list item i dropdown menu*/
     width: 100%;
     border-top: 0.5px solid var(--dark-grey);
 }
 
-header .navbar ul li ul li ul{      /*Styling af nested dropdown menu*/
+header nav ul li ul li ul{      /*Styling af nested dropdown menu*/
     left: 12.5rem;
     top: 0;
 }
 
-header .navbar ul li:focus-within > ul,
-header .navbar ul li:hover > ul{     /*Definere display af dropdown menu på hover eller fokus*/
+header nav ul li:focus-within > ul,
+header nav ul li:hover > ul{     /*Definere display af dropdown menu på hover eller fokus*/
     display: block;
     z-index: 10;                     /*Styrer stablingrækkefølge højere værdi ligger øverst, i denne tilfælde ligger alt under ul øverst for alle andre elementer*/
 }
