@@ -101,14 +101,15 @@ header::after {                     /*Fjern floats efter header content*/
     flex-direction: column;
 }
 
+
+
+
+
+
+
 main{
     flex: 1;                        /*Definere spacen af main*/
 }
-
-#danyar-background{
-}
-
-
 
 
 #top{                             /*Styling for fixed sektionen i højre bund af siden*/
@@ -134,6 +135,14 @@ top :hover{
     background: var(--dark-grey);
     color: var(--orange);
 }
+
+
+
+
+
+
+
+
 
 footer {                            /*Styling for footer*/
     background-color: var(--light-grey);
