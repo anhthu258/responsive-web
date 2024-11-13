@@ -14,7 +14,7 @@
     --mid-white: #f4f4f4
 }
 
-main {
+article {
     display: grid;
     place-items: center;                /* Centrerer både horisontalt og vertikalt */
     min-height: 50vh;
