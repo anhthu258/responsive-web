@@ -1,0 +1,35 @@
+@font-face {
+    font-family: blank-river;
+    src: url(/fonts/blank-river.ttf);
+}
+
+:root{                                  /*Definere css variables for farver for nemmere tilgang*/
+    --white: #ffffff;
+    --blue: #1bb1e7;
+    --dark-grey: #222222;
+    --black: #000000;
+    --light-grey: #cecfca;
+}
+
+header nav {                         /*Bestemt baggrundsfarve for navigationsbar*/
+    background-color: var(--blue);
+    font-family:blank-river;
+}
+
+header nav ul li a{                 /*Styling af links i navigationsbar*/
+    color: var(--white);
+    background: var(--blue);
+}
+
+header nav ul li a:hover{           /*Styling af navigationsbar under hover tilstand*/
+    background: var(--dark-grey);
+    color: var(--white);
+}
+
+#top{                                   /*Styling for fixed sektionen i højre bund af siden*/
+    background-color: var(--blue);
+}
+
+#top a{
+    color: var(--white);
+}
