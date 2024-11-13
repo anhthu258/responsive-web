@@ -208,6 +208,7 @@ footer nav ul li a {                /* Style for links i footer navigationsbar *
     border-radius: 5px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
     transition: background-color 0.3s ease, transform 0.2s ease;
+    text-align: center;
 }
 
    /* Existing content */
@@ -222,6 +223,7 @@ footer nav ul li a {                /* Style for links i footer navigationsbar *
 .buy-button:hover {
     background-color: #f1f1f1; /* Light gray background on hover */
     transform: scale(1.1); /* Slightly enlarge the button */
+    text-align: center;
 }
 
 body {
@@ -272,3 +274,17 @@ body {
     background-size: cover;
     background-position: center;
 }
+
+/* Media query for mobile screens */
+@media (max-width: 768px) {
+    .overlay-image {
+        max-width: 90%; /* Reduces the image width on mobile */
+        padding-left: 3rem;
+    }
+
+    @media (max-width: 1024px) and (min-width: 769px) {
+    .overlay-image {
+            max-width: 70%; /* Slightly smaller width on tablet screens */
+            padding-left: 5rem;
+        }
+    }
