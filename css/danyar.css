@@ -8,6 +8,15 @@
     position: fixed;
 }
 
-.dish-container{
-    
+.dish-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    gap: 10px; /* Adjust the gap between images as needed */
+}
+
+.dishes {
+    width: 100%; /* Make images responsive to their container */
+    height: auto;
+    border-radius: 8px; /* Optional: adds rounded corners to images */
+    object-fit: cover; /* Ensures images fill their grid cells without distortion */
 }
