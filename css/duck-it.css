@@ -188,8 +188,8 @@ nav ul.sub-menus a {
 
     /* Justering af header layout */
     header nav ul {
-        flex-direction: column;        /* Gør navigationen vertikal */
-        align-items: center;           /* Centrerer menu-elementerne */
+        flex-direction: column;
+        gap: 0.5rem;
     }
 
     header nav ul li {
