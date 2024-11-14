@@ -30,10 +30,10 @@ html, body {
 
 
 #back-img {
-    background-image: url(/img/forsiden/background-empty.png);
+    background-image: url(/img/forsiden/background-update.png);
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center right;
     height: 190rem;
     min-height: 100vh;
     box-sizing: border-box;
@@ -52,8 +52,10 @@ html, body {
 #tilbud {
     position: relative; 
     margin-top: 20px; 
+    padding-left: 25%;
     left: 4%;
     top: 0;
+    grid-area: 1 / 1 / 3 / 3; 
 }
 
 #tilbud h2{
@@ -83,19 +85,50 @@ html, body {
     padding: 1%;
 }
 
+.skilt{
+    z-index: 0;
+    position: absolute;
+    top: 13.5%;
+    right: 0%;
+    size: 90%;
+}
 .grid{                                                                   /*Definere spacen af main*/
     display: grid;
-    grid-template-columns: repeat(25, 1fr);
-    grid-template-rows: repeat(10, 1fr);
+    grid-template-columns: repeat(25, 0.5fr);
+    grid-template-rows: repeat(21, 0.5fr);
     grid-column-gap: 0px;
     grid-row-gap: 0px;
 }
-.grid1 { grid-area: 2 / 2 / 7 / 7; }
-.grid2{ grid-area: 1 / 20 / 26 / 25; }
-.grid3 { grid-area: 6 / 16 / 11 / 19; }
-.grid4 { grid-area: 9 / 11 / 14 / 14; }
-.grid5 { grid-area: 12 / 6 / 17 / 9; }
-.grid6 { grid-area: 16 / 2 / 21 / 5; }
+/* x start, y slut, x slut, y start */
+
+.grid2 { 
+    grid-area: 5 / 22 / 6 / 18; 
+    background-color: grey;
+    transform: rotate(14deg);
+
+}
+.grid2 p { 
+font-size: 450%;
+font-family: big-noodle;
+letter-spacing: 5px;
+padding-top: 9%;
+padding-left: 20%;
+}
+.grid3 { 
+    grid-area: 6 / 16 / 11 / 19; 
+    background-color: grey;
+}
+.grid4 { 
+    grid-area: 9 / 11 / 14 / 14; 
+    background-color: grey;
+}
+.grid5 { 
+    grid-area: 12 / 6 / 17 / 9; 
+    background-color: grey;
+}
+.grid6 { 
+    grid-area: 16 / 2 / 21 / 5; 
+    background-color: grey;}
 .grid7 { 
     grid-area: 17 / 16 / 22 / 19;
     background-color: grey;
