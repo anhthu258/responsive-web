@@ -14,7 +14,7 @@
 } 
 
 body{
-    background-image: url(/img/popsicle/Tegnebræt\ 1\ kopier.png);
+    background-image: url(/img/popsicle/tegnebraet.webp);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -62,7 +62,7 @@ h2{
 @media (max-width: 1560px){
 
 body{
-    background-image: url(/img/popsicle/Tegnebræt\ 1\ kopier.png);
+    background-image: url(/img/popsicle/tegnebraet.webp);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top right;
@@ -91,7 +91,7 @@ body{
     } 
 
     body{
-        background-image: url(/img/popsicle/Tegnebræt\ 1\ kopier.png);
+        background-image: url(/img/popsicle/tegnebraet.webp);
         background-repeat: no-repeat;
         background-size: auto;
         background-position: top right;
@@ -131,7 +131,7 @@ body{
         } 
     
         body{
-            background-image: url(/img/popsicle/Tegnebræt\ 1\ kopier.png);
+            background-image: url(/img/popsicle/tegnebraet.webp);
             background-repeat: no-repeat;
             background-size: auto;
             background-position: top right;
