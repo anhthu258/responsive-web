@@ -191,6 +191,25 @@ html, body {
             padding: 10px;
             font-size: 14px;
         }
+
+        /* Fjerner skilt og dens element */
+        .skilt{
+            display: none;
+        }
+
+        #events{
+            display: none;
+        }
+
+        #info{
+            display: none;
+        }
+
+        #kort{
+            display: none;
+        }
+
+        /* Footer css */
     
         footer {
             height: auto;
