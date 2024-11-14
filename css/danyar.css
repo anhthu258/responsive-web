@@ -25,6 +25,11 @@ main {
     src: url(../fonts/chartoon.ttf);
 }
 
+@font-face {
+    font-family: blank-river;
+    src: url(../fonts/blank-river.ttf);
+}
+
 h1{
     font-size: 7rem;
     transform: translateX(-50%);
