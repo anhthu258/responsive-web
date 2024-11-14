@@ -32,7 +32,6 @@ header{                            /*Bestemt layout for header med brug af flexb
 position: fixed;
 z-index: 1000;
 width: 100%;
-   
 }
 
 .logo {

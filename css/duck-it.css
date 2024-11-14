@@ -78,8 +78,9 @@ nav ul.sub-menus a {
 .content {
     display: flex;
     gap: 1rem;
-    width: 45%;
-    margin: auto;
+    width: 80vh;
+    height: 40vh;
+    margin: 2rem;
     border-radius: 5%;
     background: var(--light-grey);
 }
@@ -118,7 +119,7 @@ nav ul.sub-menus a {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    margin-left: 80%;
+    margin: 1rem;
 }
 
 .content p {
@@ -152,14 +153,18 @@ nav ul.sub-menus a {
     }
 
     .content {
-        width: 90%;                    /* Øger bredden af sektionerne for bedre synlighed */
-        margin: 1rem 0;                /* Tilføjer margin mellem sektionerne */
+        width: 90%;
+        height: 30vh;
+        margin: auto;
+        border-radius: 5%;
+        background: var(--light-grey);
     }
 
     .content img {
         width: 100%;                   /* Gør billederne responsive */
-        height: auto;                  /* Sikrer at billedets proportioner opretholdes */
+        height: fit-content;                  /* Sikrer at billedets proportioner opretholdes */
         margin-bottom: 1rem;           /* Afstand mellem billede og tekst */
+        object-fit: scale-down;
     }
 
     .content article {
@@ -183,7 +188,7 @@ nav ul.sub-menus a {
 
     .order-btn {
         width: 100%;                   /* Gør bestillingsknappen fuld bredde */
-        padding: 12px 0;               /* Justerer knappadding */
+        padding: 10px 0;               /* Justerer knappadding */
         font-size: 1.1rem;             /* Mindre skrifttypestørrelse for knapper */
     }
 
@@ -230,10 +235,10 @@ nav ul.sub-menus a {
     }
 
     /* Justering af footer layout for mobil */
-    footer nav ul {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+
+    footer{
+        height: fit-content;
+        margin-top: 1rem;
     }
 
     footer nav ul li {
