@@ -28,9 +28,14 @@ html, body {
     overflow-x: hidden;                                                 /* Fjerner vandret sccrollbar */
 }
 
-
+.background{
+    z-index: 0;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
 #back-img {
-    background-image: url(/img/forsiden/background-update.png);
+/*    background-image: url(/img/forsiden/background-update.png);*/
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center right;
@@ -47,15 +52,16 @@ html, body {
     background: var(--black);
     overflow: hidden;
     padding-top: 7%;
+    z-index: 1;
 }
 
 #tilbud {
-    position: relative; 
-    margin-top: 20px; 
-    padding-left: 25%;
-    left: 4%;
-    top: 0;
-    grid-area: 1 / 1 / 3 / 3; 
+    position: absolute; 
+    top: 800px;
+    left: 100px;
+    z-index: 2;
+    font-family: big-noodle;
+    letter-spacing: 8px;
 }
 
 #tilbud h2{
@@ -63,7 +69,7 @@ html, body {
     color: var(--white);
     font-size: 12.5rem;
     position: relative;                                                 /* Sørger for, at h3 positioneres i forhold til h2 */
-    z-index: 1;                                                         /* Sikrer, at h2 er bag h3 */
+    z-index: 2;                                                         /* Sikrer, at h2 er bag h3 */
 }
 
 #tilbud h3{
@@ -83,13 +89,14 @@ html, body {
     width: max-content;
     font-size: 3.125rem;
     padding: 1%;
+    z-index: 2;
 }
 
 .skilt{
-    z-index: 0;
+    z-index: 1;
     position: absolute;
     top: 400px;
-    right: 0vh;
+    right:0px;
 }
 #kort{
     color: white;
@@ -100,6 +107,7 @@ html, body {
     top: 1150px;
     transform: rotate(15deg);
     letter-spacing: 8px;
+    z-index: 2;
 }
 
 #info{
@@ -111,6 +119,7 @@ html, body {
     top: 1055px;
     transform: rotate(-25deg);
     letter-spacing: 8px;
+    z-index: 2;
 }
 #events{
     color: #646565;
@@ -121,19 +130,61 @@ html, body {
     top: 1500px;
     letter-spacing: 8px;
     transform: rotate(-19deg);
+    z-index: 2;
 }
 
-.grid{                                                                   /*Definere spacen af main*/
-    display: grid;
-    grid-template-columns: repeat(25, 0.5fr);
-    grid-template-rows: repeat(20, 0.5fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
+#danyar{
+    width: 300px;
+    bottom: 760px;
+    right: 1450px;
+    position: absolute;
+    z-index: 2;
 }
-/* x start, y slut, x slut, y start */
+#mormor{
+    width: 300px;
+    bottom: 345px;
+    right: 850px;
+    position: absolute;
+    z-index: 2;
+}
+#duck{
+    width: 300px;
+    bottom: 190px;
+    right: 1450px;
+    position: absolute;
+    z-index: 2;
+}
+#blaa{
+    width: 300px;
+    bottom: 1075px;
+    right: 870px;
+    position: absolute;
+    z-index: 2;
+}
+#everest{
+    width: 300px;
+    bottom: 1450px;
+    right: 250px;
+    position: absolute;
+    z-index: 2;
+}
+#popsicle{
+    width: 300px;
+    bottom: 250px;
+    right: 250px;
+    position: absolute;
+    z-index: 2;
+}
 
+.grid{
+    position: relative;
+    height: 190rem;
+}
 
     @media screen and (max-width: 768px) {
+        .grid, .skilt, #kort, #events, #info{
+            display: none;
+        }
         header nav ul {
             flex-direction: column;
             justify-content: flex-start;
