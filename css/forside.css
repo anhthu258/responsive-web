@@ -22,18 +22,31 @@
     --mid-white: #f4f4f4;
 }
 
-html, body{                                                             /*Posisition af baggrundsbillede*/
+article{                                                             /*Posisition af baggrundsbillede*/
     background-image: url(/img/forsiden/background-empty.png);
     background-size: cover;
-    background-position: top center;
     background-repeat: no-repeat;
     height: 190rem;
+    background-position: center;
+    padding: 0 50px;
+    box-sizing: border-box;
+    min-height: 100vh;
 }
 
-#tilbud{
-    position: absolute;
-    top: 40%;
+.back-video {                                                           /* Definere videoens position under andre elementer */
+    position: relative;
+    z-index: 0;
+    height: 50vh;
+    width: 100%;
+    background: var(--black);
+    overflow: hidden;
+}
+
+#tilbud {
+    position: relative; 
+    margin-top: 20px; 
     left: 4%;
+    top: 0;
 }
 
 #tilbud h2{

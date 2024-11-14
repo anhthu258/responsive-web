@@ -19,6 +19,12 @@ main h2 {
     margin: 1.875rem;
     writing-mode: vertical-rl;                      /* Teksten står lodret fra højre mod venstre */
     text-orientation: upright;                      /* Bogstaverne forbliver oprejst */
+    transition: 0.5s;
+}
+
+main h2:hover{
+    -webkit-text-stroke: 2px var(--orange);
+    color: transparent;
 }
 
 main{
