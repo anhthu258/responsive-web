@@ -46,6 +46,7 @@ html, body {
     width: 100%;
     background: var(--black);
     overflow: hidden;
+    padding-top: 7%;
 }
 
 #tilbud {
@@ -82,11 +83,24 @@ html, body {
     padding: 1%;
 }
 
-main{                                                                   /*Definere spacen af main*/
-    .parent{
-        display: grid;
-    }
-    }
+.grid{                                                                   /*Definere spacen af main*/
+    display: grid;
+    grid-template-columns: repeat(25, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+.grid1 { grid-area: 2 / 2 / 7 / 7; }
+.grid2{ grid-area: 1 / 20 / 26 / 25; }
+.grid3 { grid-area: 6 / 16 / 11 / 19; }
+.grid4 { grid-area: 9 / 11 / 14 / 14; }
+.grid5 { grid-area: 12 / 6 / 17 / 9; }
+.grid6 { grid-area: 16 / 2 / 21 / 5; }
+.grid7 { 
+    grid-area: 17 / 16 / 22 / 19;
+    background-color: grey;
+}
+
 
     @media screen and (max-width: 768px) {
         header nav ul {
