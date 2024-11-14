@@ -32,6 +32,10 @@ header nav ul li a:hover{           /*Styling af navigationsbar under hover tils
     color: var(--white);
 }
 
+nav ul.sub-menus a {
+	color: var(--white);
+}
+
 #top{                                   /*Styling for fixed sektionen i højre bund af siden*/
     background-color: var(--red);
 }
