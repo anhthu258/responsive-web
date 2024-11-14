@@ -21,7 +21,7 @@
 
 :root{                              /*Definere css variables for farver for nemmere tilgang*/
     --white: #ffffff;
-    --orange: #ff670953;
+    --orange: #ff9327;
     --dark-grey: #222222;
     --black: #000000;
     --light-grey: #cecfca;
@@ -79,17 +79,17 @@ header nav ul li a{             /*Styling af links i navigationsbar*/
     text-decoration: none;
     font-size: 1.55rem;
     padding: 1.5rem;
-    color: white;
+    color: var(--white);
     display: block;
     background: var(--black);
 }
 
-header nav ul li a:hover{       /*Styling af navigationsbar under hover tilstand*/
+nav ul li a:hover{       /*Styling af navigationsbar under hover tilstand*/
     background: var(--dark-grey);
-    color: var(--orange);
+    color: var(--white);
 }
 
-header nav ul li ul{            /*Styling af dropdown menu i navbar*/
+nav ul li ul{            /*Styling af dropdown menu i navbar*/
     position: absolute;
     left: 0;
     width: 100%;                    /*Definere at den skal udfylde hele siden*/
@@ -98,18 +98,18 @@ header nav ul li ul{            /*Styling af dropdown menu i navbar*/
     z-index: 10;                    /*Styrer stablingrækkefølge højere værdi ligger øverst, i denne tilfælde ligger alt under ul øverst for alle andre elementer*/
 }
 
-header nav ul li ul li{         /*Styling af list item i dropdown menu*/
+nav ul li ul li{         /*Styling af list item i dropdown menu*/
     width: 100%;
     border-top: 0.5px solid var(--dark-grey);
 }
 
-header nav ul li ul li ul{      /*Styling af nested dropdown menu*/
+nav ul li ul li ul{      /*Styling af nested dropdown menu*/
     left: 12.5rem;
     top: 0;
 }
 
-header nav ul li:focus-within > ul,
-header nav ul li:hover > ul{     /*Definere display af dropdown menu på hover eller fokus*/
+nav ul li:focus-within > ul,
+nav ul li:hover > ul{     /*Definere display af dropdown menu på hover eller fokus*/
     display: block;
     z-index: 10;                     /*Styrer stablingrækkefølge højere værdi ligger øverst, i denne tilfælde ligger alt under ul øverst for alle andre elementer*/
 }
@@ -209,6 +209,12 @@ footer nav ul li:last-child {       /* Fjerne margin for den sidste list item i 
 footer nav ul li a {                /* Style for links i footer navigationsbar */
     text-decoration: none;
     color: var(--dark-grey);
+}
+
+@media screen and (max-width: 768px){
+    .nav-bar{
+        display: none;
+    }
 }
 
 

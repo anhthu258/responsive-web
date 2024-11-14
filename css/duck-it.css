@@ -32,6 +32,10 @@ header nav ul li a:hover{           /*Styling af navigationsbar under hover tils
     color: var(--white);
 }
 
+nav ul.sub-menus a {
+	color: var(--white);
+}
+
 #top{                                   /*Styling for fixed sektionen i højre bund af siden*/
     background-color: var(--red);
 }
@@ -48,6 +52,7 @@ header nav ul li a:hover{           /*Styling af navigationsbar under hover tils
     display: flex;                      /* Placere billedet i center */
     align-items: center;
     justify-content: center;
+    margin-top: 11%;
 }
 
 #circle img {
@@ -183,9 +188,15 @@ header nav ul li a:hover{           /*Styling af navigationsbar under hover tils
     }
 
     /* Justering af header layout */
+
+    header section{
+        padding: 5%;
+    }
+
     header nav ul {
-        flex-direction: column;        /* Gør navigationen vertikal */
-        align-items: center;           /* Centrerer menu-elementerne */
+        flex-direction: column;
+        gap: 0.5rem;
+        display: none;
     }
 
     header nav ul li {
@@ -210,6 +221,7 @@ header nav ul li a:hover{           /*Styling af navigationsbar under hover tils
     #circle {
         width: 10rem;                  /* Reducerer størrelsen af cirklen */
         height: 10rem;
+        
     }
 
     #circle img {
