@@ -107,20 +107,38 @@ main{                                                                   /*Define
             width: 1.5rem;
             margin: 0.5rem;
         }
+
+        #tilbud{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 10rem;
+        }
+        
     
         #tilbud h2 {
-            font-size: 4rem;
+            margin-top: 5rem;
+            font-size: 8rem;
         }
     
         #tilbud h3 {
-            font-size: 2rem;
-            left: 8rem;
-            top: 4rem;
+            font-size: 6rem;
+            left: 25rem;
+            top: 9rem;
         }
     
         #tilbud p {
-            font-size: 1.5rem;
-            padding: 0.5rem;
+            margin-top: 5rem;
+            font-size: 2.5rem;
+            padding: 1.5rem;
+        }
+
+        #back-img{
+            background: url(../img/forsiden/background-phone.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            box-sizing: border-box;
         }
     
         #top {
