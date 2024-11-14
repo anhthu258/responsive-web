@@ -13,6 +13,15 @@
     src: url(/fonts/blank-river.ttf);
 }
 
+:root{                                              /*Definere css variables for farver for nemmere tilgang*/
+    --white: #ffffff;
+    --orange:  #ff9327;
+    --dark-grey: #222222;
+    --black: #000000;
+    --light-grey: #cecfca;
+    --mid-white: #f4f4f4;
+}
+
 main h2 {
     font-family: big-noodle;
     font-size: 6.25em;
