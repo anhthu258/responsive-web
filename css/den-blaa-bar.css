@@ -45,17 +45,29 @@ aside {
     height: 100%;             /* Ensure it uses the full height of the parent, if not already defined */
 }
 
-#bar-logo {
-    transform: rotate(90deg);
-    width: 18.75rem;
-    height: 18.75rem;
+#circle {
+    width: 12.5rem;
+    height: 12.5rem;
+    background-color: var(--light-grey);
+    border-radius: 50%;
+    display: flex;                      /* Placere billedet i center */
+    align-items: center;
+    justify-content: center;
+    margin: 15% 40% 0;
+}
+
+#circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;                  /* Bevarer billedets proportioner, mens det fylder hele cirklen */
+    overflow: visible;                  /* Sørge for at billedet kan flyde ud af cirklen*/
 }
 
 #menu {
-    display: flex;  
-    flex-wrap: wrap;                    /* Sørger for, at sektionerne bryder op i flere rækker */
+    display: flex;
+    flex-wrap: wrap;
     gap: 2rem;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 #menu section img{
@@ -67,15 +79,14 @@ aside {
 .content {
     display: flex;
     gap: 1rem;
-    width: 45%;
-    margin: auto;
+    width: 80vh;
+    height: 40vh;
+    margin: 2rem;
     border-radius: 5%;
-    justify-content: space-between;
 }
 
 .content:hover{
     background: rgba(206, 207, 202, 0.5);
-    cursor: pointer;
 }
 
 .content img {
@@ -95,14 +106,14 @@ aside {
 }
 
 .content h3 {
-    color: var(--black);
+    color: var(--red);
     padding: 1rem;
     font-size: 2rem;
     margin-bottom: 0.5rem;
 }
 
 .content h4{
-    color: var(--blue);
+    color: var(--red);
     padding: 1rem;
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
@@ -110,9 +121,9 @@ aside {
 
 .content div{
     display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    margin-left: 80%;
+    flex-direction: column-reverse;
+    align-items: flex-start;
+    margin: 1rem;
 }
 
 .content p {
@@ -163,38 +174,111 @@ aside {
     }
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
+    /* Layoutjusteringer for mindre skærme */
+    #menu {
+        flex-direction: column;        /* Stabler menu-elementerne i én kolonne */
+        align-items: center;           /* Centrerer sektionerne horisontalt */
+    }
+
     .content {
-        width: 100%;
-        flex-direction: column;
+        width: 90%;
+        height: 30vh;
+        margin: auto;
+        border-radius: 5%;
+        background: var(--light-grey);
     }
 
     .content img {
-        width: 100%;
-        margin: 0;
+        width: 100%;                   /* Gør billederne responsive */
+        height: fit-content;                  /* Sikrer at billedets proportioner opretholdes */
+        margin-bottom: 1rem;           /* Afstand mellem billede og tekst */
+        object-fit: scale-down;
     }
 
     .content article {
-        align-items: center;
-        text-align: center;
+        max-width: 100%;               /* Tillader artiklen at strække sig helt */
+        text-align: center;            /* Centrerer teksten i artiklen */
+    }
+
+    /* Justering af skrifttypestørrelser for bedre læsbarhed */
+    .content h3 {
+        font-size: 1.5rem;             /* Gør overskriften mindre */
+    }
+
+    .content h4 {
+        font-size: 1.2rem;             /* Gør underoverskriften mindre */
+    }
+
+    .content p {
+        font-size: 0.9rem;             /* Reducerer skrifttypestørrelsen på paragrafer */
+        line-height: 1.4;              /* Øger linjeafstanden for læsbarhed */
+    }
+
+    .order-btn {
+        width: 100%;                   /* Gør bestillingsknappen fuld bredde */
+        padding: 10px 0;               /* Justerer knappadding */
+        font-size: 1.1rem;             /* Mindre skrifttypestørrelse for knapper */
+    }
+
+    /* Justering af header layout */
+
+    header section{
+        padding: 5%;
     }
 
     header nav ul {
         flex-direction: column;
         gap: 0.5rem;
+        display: none;
     }
 
-    #top {
-        font-size: 0.7rem;
-        padding: 5px;
+    header nav ul li {
+        padding: 1rem 0;               /* Tilføjer afstand mellem menu-elementerne */
     }
 
-    #menu {
-        gap: 0.5rem;
+    header nav ul li a {
+        font-size: 1.4rem;             /* Reducerer skrifttypestørrelsen for menu-links */
     }
 
-    .order-btn {
-        font-size: 1rem;
-        padding: 8px 16px;
+    header nav ul li ul {
+        left: 0;                       /* Sikrer at dropdown-menuer er justeret med hovedmenuen */
+        width: 100%;                   /* Gør dropdown-menuerne fuld bredde */
+    }
+
+    /* Gør logoet mindre på mobil */
+    #logo img {
+        width: 70%;                    /* Reducerer logo-størrelsen på små skærme */
+        margin: 0 auto;
+    }
+
+    #circle {
+        width: 10rem;                  /* Reducerer størrelsen af cirklen */
+        height: 10rem;
+        
+    }
+
+    #circle img {
+        object-fit: cover;
+        border-radius: 50%;
+    }
+
+    /* Justering af footer layout for mobil */
+
+    footer{
+        height: fit-content;
+        margin-top: 1rem;
+    }
+
+    footer nav ul li {
+        margin: 0.5rem 0;
+    }
+
+    footer nav ul li a {
+        font-size: 1.1rem;             /* Mindre skrifttypestørrelse for footer links */
+    }
+
+    #top a {
+        font-size: 1rem;               /* Mindre skrifttypestørrelse for "Til toppen" knappen */
     }
 }
