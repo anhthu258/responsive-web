@@ -134,6 +134,11 @@ html, body {
 
 
     @media screen and (max-width: 768px) {
+        
+        body{
+            overflow: hidden;
+        }
+
         header nav ul {
             flex-direction: column;
             justify-content: flex-start;
@@ -153,23 +158,26 @@ html, body {
             margin: 0.5rem;
         }
 
+        /* Ændring til frokost tilbud tekst */
         #tilbud{
             display: flex;
             flex-direction: column;
             align-items: center;
             margin-top: 10rem;
+            margin-left: 18rem;
         }
         
     
         #tilbud h2 {
             margin-top: 5rem;
-            font-size: 8rem;
+            margin-left: 5rem;
+            font-size: 10rem;
         }
     
         #tilbud h3 {
             font-size: 6rem;
-            left: 25rem;
-            top: 9rem;
+            left: 9rem;
+            top: 11rem;
         }
     
         #tilbud p {
