@@ -137,7 +137,7 @@ header nav ul{                  /*Styling af navigationsbar*/
 
 header nav ul li{               /*Definere position af navigationsbar listitem*/
     position: relative;
-    padding: 1.5 1.5rem;
+    padding: 0.5rem 1rem;
 }
 
 header nav ul li a{             /*Styling af links i navigationsbar*/
@@ -233,7 +233,6 @@ nav ul.sub-menus a:hover{
     text-decoration: none;
     font-family: serif;
     font-weight: 300;
-    font-style: bold;
 }
 
 footer {                            /*Styling for footer*/
