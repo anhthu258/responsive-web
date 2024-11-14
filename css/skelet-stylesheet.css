@@ -172,7 +172,6 @@ footer {                            /*Styling for footer*/
     color: var(--black);
     text-align: center;
     padding: 1.25rem;
-    margin-top: 3.125rem;
     height: 21.875rem;
     display: flex;
     flex-direction: column;
