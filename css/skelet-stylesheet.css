@@ -1,17 +1,17 @@
-*{                              /*Reset alt default setting for margin og padding, dermed definere alle box-sizing til border-box*/
+*{                                  /*Reset alt default setting for margin og padding, dermed definere alle box-sizing til border-box*/
     margin: 0;
     padding: 0;
     box-sizing:border-box;
     font-size: 16px;
 }
 
-:root{                          /*Definere css variables for farver for nemmere tilgang*/ /*MANGLER*/
+:root{                              /*Definere css variables for farver for nemmere tilgang*/
     --white: #ffffff;
     --orange: #ff9327;
     --dark-grey: #222222;
     --black: #000000;
     --light-grey: #cecfca;
-    --mid-white: #f4f4f4
+    --mid-white: #f4f4f4;
 }
 
 #header{                            /*Bestemt layout for header med brug af flexbox*/
@@ -35,26 +35,27 @@ header section{                         /*Definere placering af logo og search-i
     justify-content: space-between;
     align-items: center;
     background: var(--black);
+    z-index: 10;
 }
 
-header .navbar {                         /*Bestemt baggrundsfarve for navigationsbar*/
+header nav {                         /*Bestemt baggrundsfarve for navigationsbar*/
     background-color: var(--orange);
     font-family:blank-river;
 }
 
-header .navbar ul{                  /*Styling af navigationsbar*/
+header nav ul{                  /*Styling af navigationsbar*/
     list-style: none;
     width: 100%;
     display: flex;
     justify-content: space-around;
 }
 
-header .navbar ul li{               /*Definere position af navigationsbar listitem*/
+header nav ul li{               /*Definere position af navigationsbar listitem*/
     position: relative;
     padding: 1.5 1.5rem;
 }
 
-header .navbar ul li a{             /*Styling af links i navigationsbar*/
+header nav ul li a{             /*Styling af links i navigationsbar*/
     text-decoration: none;
     font-size: 1.55rem;
     padding: 1.5rem;
@@ -63,12 +64,12 @@ header .navbar ul li a{             /*Styling af links i navigationsbar*/
     background: var(--orange);
 }
 
-header .navbar ul li a:hover{       /*Styling af navigationsbar under hover tilstand*/
+header nav ul li a:hover{       /*Styling af navigationsbar under hover tilstand*/
     background: var(--dark-grey);
     color: var(--orange);
 }
 
-header .navbar ul li ul{            /*Styling af dropdown menu i navbar*/
+header nav ul li ul{            /*Styling af dropdown menu i navbar*/
     position: absolute;
     left: 0;
     width: 100%;                    /*Definere at den skal udfylde hele siden*/
@@ -77,18 +78,18 @@ header .navbar ul li ul{            /*Styling af dropdown menu i navbar*/
     z-index: 10;                    /*Styrer stablingrækkefølge højere værdi ligger øverst, i denne tilfælde ligger alt under ul øverst for alle andre elementer*/
 }
 
-header .navbar ul li ul li{         /*Styling af list item i dropdown menu*/
+header nav ul li ul li{         /*Styling af list item i dropdown menu*/
     width: 100%;
     border-top: 0.5px solid var(--dark-grey);
 }
 
-header .navbar ul li ul li ul{      /*Styling af nested dropdown menu*/
+header nav ul li ul li ul{      /*Styling af nested dropdown menu*/
     left: 12.5rem;
     top: 0;
 }
 
-header .navbar ul li:focus-within > ul,
-header .navbar ul li:hover > ul{     /*Definere display af dropdown menu på hover eller fokus*/
+header nav ul li:focus-within > ul,
+header nav ul li:hover > ul{     /*Definere display af dropdown menu på hover eller fokus*/
     display: block;
     z-index: 10;                     /*Styrer stablingrækkefølge højere værdi ligger øverst, i denne tilfælde ligger alt under ul øverst for alle andre elementer*/
 }
@@ -97,6 +98,32 @@ header::after {                     /*Fjern floats efter header content*/
     content: "";
     display: table;
     clear: both;
+}
+
+nav ul.sub-menus{
+	height: auto;
+	overflow: hidden;
+	width: 170px;
+	background: #444444;
+	position: absolute;
+	z-index: 10;
+	display: none;
+}
+nav ul.sub-menus li {
+	display: block;
+	text-align: left;
+	width: 100%;
+}
+nav ul.sub-menus a {
+	color: var(--black);
+	font-size: 1.25rem;
+}
+nav li:hover ul.sub-menus {
+	display: block
+}
+nav ul.sub-menus a:hover{
+	background: var(--dark-grey);
+	color: var(--white);
 }
 
 #wrapper {
@@ -161,3 +188,5 @@ footer nav ul li a {                /* Style for links i footer navigationsbar *
     text-decoration: none;
     color: var(--dark-grey);
 }
+
+

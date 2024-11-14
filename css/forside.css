@@ -13,26 +13,178 @@
     src: url(/fonts/blank-river.ttf);
 }
 
-html, body{                                         /*Posisition af baggrundsbillede*/
-    background-image: url(/img/background-empty.png);
-    background-size: cover;
-    background-position: top center;
-    background-repeat: no-repeat;
-    height: 190rem;
+:root{                                                                  /*Definere css variables for farver for nemmere tilgang*/
+    --white: #ffffff;
+    --orange: #ff9327;
+    --dark-grey: #222222;
+    --black: #000000;
+    --light-grey: #cecfca;
+    --mid-white: #f4f4f4;
 }
 
-main{                                               /*Definere spacen af main*/
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;                                                 /* Fjerner vandret sccrollbar */
+}
+
+
+#back-img {
+    background-image: url(/img/forsiden/background-empty.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 190rem;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+.back-video {                                                           /* Definere videoens position under andre elementer */
+    position: relative;
+    z-index: 0;
+    height: 50vh;
+    width: 100%;
+    background: var(--black);
+    overflow: hidden;
+}
+
+#tilbud {
+    position: relative; 
+    margin-top: 20px; 
+    left: 4%;
+    top: 0;
+}
+
+#tilbud h2{
+    font-family: big-noodle-italic;
+    color: var(--white);
+    font-size: 12.5rem;
+    position: relative;                                                 /* Sørger for, at h3 positioneres i forhold til h2 */
+    z-index: 1;                                                         /* Sikrer, at h2 er bag h3 */
+}
+
+#tilbud h3{
+    font-family: blank-river;
+    color: var(--orange);
+    font-size: 6.25rem;
+    position: absolute;
+    top: 8rem;
+    left: 18.5rem;
+    z-index: 2;                                                         /* Sikrer, at h3 vises over h2 */
+    rotate: -25deg;
+}
+
+#tilbud p{
+    color: var(--white);
+    background: rgba(211, 211, 211, 0.5);
+    width: max-content;
+    font-size: 3.125rem;
+    padding: 1%;
+}
+
+main{                                                                   /*Definere spacen af main*/
     .parent{
         display: grid;
     }
     }
 
-    @media only screen and (max-width: 400px ){     /*til responsive telefon*/
-        html, body{
-            display: flex;
-        }
+    @media screen and (max-width: 768px) {
+        header nav ul {
+            flex-direction: column;
+            justify-content: flex-start;
         }
     
-        @media only screen and (min-width: 600px){  /*til responsive tablet*/
-    
+        header nav ul li {
+            padding: 0.5rem 1rem;
         }
+    
+        #logo {
+            width: auto;
+            padding: 0.5rem;
+        }
+    
+        .icon {
+            width: 1.5rem;
+            margin: 0.5rem;
+        }
+    
+        #tilbud h2 {
+            font-size: 4rem;
+        }
+    
+        #tilbud h3 {
+            font-size: 2rem;
+            left: 8rem;
+            top: 4rem;
+        }
+    
+        #tilbud p {
+            font-size: 1.5rem;
+            padding: 0.5rem;
+        }
+    
+        #top {
+            right: 10px;
+            padding: 10px;
+            font-size: 14px;
+        }
+    
+        footer {
+            height: auto;
+            padding: 1rem;
+        }
+    
+        footer img {
+            width: 100%;
+            max-width: 20rem;
+        }
+    
+        footer nav ul li {
+            margin-right: 0.5rem;
+        }
+    }
+    
+    /* Media query for tablet (768px til 1024px) */
+    @media screen and (min-width: 769px) and (max-width: 1024px) {
+        header nav ul {
+            flex-direction: row;
+            justify-content: space-around;
+        }
+    
+        header nav ul li {
+            padding: 1rem;
+        }
+    
+        #logo {
+            padding: 0.7rem;
+        }
+    
+        .icon {
+            width: 1.75rem;
+            margin: 0.7rem;
+        }
+    
+        #tilbud h2 {
+            font-size: 6rem;
+        }
+    
+        #tilbud h3 {
+            font-size: 3rem;
+            left: 12rem;
+            top: 6rem;
+        }
+    
+        #tilbud p {
+            font-size: 2rem;
+        }
+    
+        footer {
+            height: auto;
+            padding: 1.5rem;
+        }
+    
+        footer img {
+            width: 100%;
+            max-width: 22rem;
+        }
+    }

@@ -1,0 +1,106 @@
+@font-face {
+    font-family:big-noodle;
+    src: url(/fonts/big-noodle.ttf)
+    }
+
+@font-face {
+    font-family:big-noodle-italic;
+    src: url(/fonts/big-noodle-italic.ttf)
+}
+
+@font-face {
+    font-family: blank-river;
+    src: url(/fonts/blank-river.ttf);
+}
+
+main h2 {
+    font-family: big-noodle;
+    font-size: 6.25em;
+    margin: 1.875rem;
+    writing-mode: vertical-rl;                      /* Teksten står lodret fra højre mod venstre */
+    text-orientation: upright;                      /* Bogstaverne forbliver oprejst */
+    transition: 0.5s;
+}
+
+main h2:hover{
+    -webkit-text-stroke: 2px var(--orange);
+    color: transparent;
+}
+
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main img{
+    margin-top: 2.813rem;
+    max-width: fit-content;
+
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+    header nav ul {
+        flex-direction: column;                     /* Navigationspunkter i én kolonne */
+        align-items: center;
+    }
+
+    header nav ul li {
+        padding: 1rem;                              /* Mindre padding for bedre plads */
+    }
+
+    header nav ul li ul {
+        position: static;                           /* Dropdown bliver inline for bedre læsbarhed */
+        width: auto;
+        background: var(--dark-grey);
+    }
+
+    main h2 {
+        font-size: 4em;                             /* Reducer tekststørrelse */
+        writing-mode: horizontal-tb;                /* Skift tekst til vandret */
+    }
+
+    main {
+        flex-direction: column;                     /* Vertikal layout */
+        padding: 1rem;
+    }
+
+    main img {
+        max-width: 80%;                             /* Juster billedets bredde */
+    }
+}
+
+/* Mobil */
+@media (max-width: 480px) {
+    header nav ul {
+        flex-direction: column;
+    }
+
+    header nav ul li {
+        padding: 0.5rem;                            /* Mindre padding på mobil */
+    }
+
+    header nav ul li a {
+        font-size: 1.2rem;                          /* Mindre fontstørrelse for at undgå overlap */
+        padding: 1rem;
+    }
+
+    header nav ul li ul {
+        position: static;
+        width: auto;
+        background: var(--dark-grey);
+    }
+
+    main h2 {
+        font-size: 3em;                             /* Endnu mindre tekststørrelse */
+    }
+
+    footer p {
+        font-size: 0.8em;                           /* Mindre tekst i footeren */
+    }
+
+    #wrapper {
+        padding: 0.5rem;                            /* Mindre margin for mobil */
+    }
+}

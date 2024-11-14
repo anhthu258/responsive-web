@@ -1,16 +1,21 @@
-*{                              /*Reset alt default setting for margin og padding, dermed definere alle box-sizing til border-box*/
+@font-face {
+    font-family: blank-river;
+    src: url(/fonts/blank-river.ttf);
+}
+*{                                  /*Reset alt default setting for margin og padding, dermed definere alle box-sizing til border-box*/
     margin: 0;
     padding: 0;
     box-sizing:border-box;
     font-size: 16px;
 }
 
-:root{                          /*Definere css variables for farver for nemmere tilgang*/ /*MANGLER*/
-    --white: #ffffff;
-    --orange: #ff9327;
+:root{                              /*Definere css variables for farver for nemmere tilgang*/
+    --white: #042706;
+    --orange: rgb(13, 67, 7);
     --dark-grey: #222222;
     --black: #000000;
     --light-grey: #cecfca;
+    --mid-white: #f4f4f4;
 }
 
 #header{                            /*Bestemt layout for header med brug af flexbox*/
@@ -19,7 +24,8 @@
 }
 
 #logo{
-    width: 0.938rem;
+    padding: 0.938rem;
+    width: 0.525rem;
 }
 
 .icon{
@@ -35,36 +41,38 @@ header section{                         /*Definere placering af logo og search-i
     background: var(--black);
 }
 
-header .navbar {                         /*Bestemt baggrundsfarve for navigationsbar*/
-    background-color: var(--orange);     /*skal ændre til den rigtige farve*/ /*MANGLER*/
+header nav {                         /*Bestemt baggrundsfarve for navigationsbar*/
+    background-color: var(--orange);
+    font-family:blank-river;
 }
 
-header .navbar ul{                  /*Styling af navigationsbar*/
+header nav ul{                  /*Styling af navigationsbar*/
     list-style: none;
     width: 100%;
     display: flex;
     justify-content: space-around;
 }
 
-header .navbar ul li{               /*Definere position af navigationsbar listitem*/
+header nav ul li{               /*Definere position af navigationsbar listitem*/
     position: relative;
+    padding: 1.5 1.5rem;
 }
 
-header .navbar ul li a{             /*Styling af links i navigationsbar*/
+header nav ul li a{             /*Styling af links i navigationsbar*/
     text-decoration: none;
-    font-size: 1.25rem;
-    padding: 1.125rem;
+    font-size: 1.55rem;
+    padding: 1.5rem;
     color: black;
     display: block;
     background: var(--orange);
 }
 
-header .navbar ul li a:hover{       /*Styling af navigationsbar under hover tilstand*/
+header nav ul li a:hover{       /*Styling af navigationsbar under hover tilstand*/
     background: var(--dark-grey);
     color: var(--orange);
 }
 
-header .navbar ul li ul{            /*Styling af dropdown menu i navbar*/
+header nav ul li ul{            /*Styling af dropdown menu i navbar*/
     position: absolute;
     left: 0;
     width: 100%;                    /*Definere at den skal udfylde hele siden*/
@@ -73,18 +81,18 @@ header .navbar ul li ul{            /*Styling af dropdown menu i navbar*/
     z-index: 10;                    /*Styrer stablingrækkefølge højere værdi ligger øverst, i denne tilfælde ligger alt under ul øverst for alle andre elementer*/
 }
 
-header .navbar ul li ul li{         /*Styling af list item i dropdown menu*/
+header nav ul li ul li{         /*Styling af list item i dropdown menu*/
     width: 100%;
     border-top: 0.5px solid var(--dark-grey);
 }
 
-header .navbar ul li ul li ul{      /*Styling af nested dropdown menu*/
+header nav ul li ul li ul{      /*Styling af nested dropdown menu*/
     left: 12.5rem;
     top: 0;
 }
 
-header .navbar ul li:focus-within > ul,
-header .navbar ul li:hover > ul{     /*Definere display af dropdown menu på hover eller fokus*/
+header nav ul li:focus-within > ul,
+header nav ul li:hover > ul{     /*Definere display af dropdown menu på hover eller fokus*/
     display: block;
     z-index: 10;                     /*Styrer stablingrækkefølge højere værdi ligger øverst, i denne tilfælde ligger alt under ul øverst for alle andre elementer*/
 }
@@ -95,14 +103,36 @@ header::after {                     /*Fjern floats efter header content*/
     clear: both;
 }
 
+nav ul.sub-menus{
+	height: auto;
+	overflow: hidden;
+	width: 170px;
+	background: #444444;
+	position: absolute;
+	z-index: 10;
+	display: none;
+}
+nav ul.sub-menus li {
+	display: block;
+	text-align: left;
+	width: 100%;
+}
+nav ul.sub-menus a {
+	color: var(--black);
+	font-size: 1.25rem;
+}
+nav li:hover ul.sub-menus {
+	display: block
+}
+nav ul.sub-menus a:hover{
+	background: var(--dark-grey);
+	color: var(--white);
+}
+
 #wrapper {
     min-height: 100%;               /*Definere kontents højde, dette sørge for en sticky footer der reagere med kontentet, dermed forbliver den i bunden af siden under alle forhold*/
     display: flex;
     flex-direction: column;
-}
-
-main{
-    flex: 1;                        /*Definere spacen af main*/
 }
 
 #top{                             /*Styling for fixed sektionen i højre bund af siden*/
@@ -117,16 +147,11 @@ main{
 }
 
 #top a{                           /*Styling for links i top*/
-    color: var(--black);
+    color: var(--white);
     text-decoration: none;
     font-family: serif;
     font-weight: 300;
     font-style: bold;
-}
-
-top :hover{
-    background: var(--dark-grey);
-    color: var(--orange);
 }
 
 footer {                            /*Styling for footer*/
@@ -187,69 +212,8 @@ h1{
   padding-left: 1rem;
   padding-right: 1rem;
 }
-  /* Container for the horizontal scroll section */
-  .scroll-container {
-    width: 100%;
-    height: 30rem; /* Fixed height for the scrollable section */
-    overflow-x: scroll; /* Enable horizontal scrolling */
-    white-space: nowrap; /* Prevent images from wrapping to the next line */
-    padding: 10px 0;
-    box-sizing: border-box; /* Include padding in element's total width/height */
-}
-
-/* Style for the images */
-.scroll-container img {
-    width: 30rem; /* Set a fixed width for the images */
-    height: auto; /* Maintain aspect ratio */
-    display: inline-block; /* Make images appear side by side */
-    border-radius: 8px; /* Optional: rounded corners for images */
-    position: relative; /* Allow text positioning over the image */
-    margin-right: 10px; /* Space between images */
-}
-
-/* Individual text for each image on hover */
-.scroll-container img:nth-child(1)::after {
-    content: "This is Image 1!";
-}
-
-.scroll-container img:nth-child(2)::after {
-    content: "This is Image 2!";
-}
-
-.scroll-container img:nth-child(3)::after {
-    content: "This is Image 3!";
-}
-
-.scroll-container img:nth-child(4)::after {
-    content: "This is Image 4!";
-}
-
-.scroll-container img:nth-child(5)::after {
-    content: "This is Image 5!";
-}
-
-.scroll-container img:nth-child(6)::after {
-    content: "This is Image 6!";
-}
-
-/* Styling for the text */
-.scroll-container img::after {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); /* Center the text */
-    color: white; /* Text color */
-    font-size: 24px; /* Font size */
-    font-weight: bold; /* Make the text bold */
-    opacity: 0; /* Initially hide the text */
-    transition: opacity 0.3s ease; /* Smooth transition for the text */
-}
-
-/* Show the text when hovering over the image */
-.scroll-container img:hover::after {
-    opacity: 1; /* Make the text visible on hover */
-}
-
+ 
+/* Style the background image */
 .background-image {
     position: fixed;
     top: 0;
@@ -259,3 +223,63 @@ h1{
     object-fit: cover; /* Ensures the image covers the entire area */
     z-index: -1; /* Places the image behind other content */
 }
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 30vh;
+    overflow: hidden;
+    background-color: #ffffff;
+}
+
+/* Individual image styles */
+.vin-flaske, .vin-flasker {
+    width: 700px;
+    height: auto;
+    opacity: 0; /* Start invisible */
+    transform: scale(0.5) rotate(0deg); /* Start small and straight */
+    transition: transform 0.5s ease-out; /* Smooth scale-up after entrance */
+}
+
+/* Animation for the image coming from the left */
+.vin-flaske {
+    animation: slideInLeft 3s ease-out forwards;
+}
+
+/* Animation for the image coming from the right */
+.vin-flasker {
+    animation: slideInRight 3s ease-out forwards;
+}
+
+/* Keyframes for the left slide-in effect */
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(-100%) scale(0.5) rotate(-15deg);
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        transform: translateX(0) scale(1) rotate(5deg);
+        opacity: 1;
+    }
+}
+
+/* Keyframes for the right slide-in effect */
+@keyframes slideInRight {
+    0% {
+        transform: translateX(100%) scale(0.5) rotate(15deg);
+        opacity: 0;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        transform: translateX(0) scale(1) rotate(-5deg);
+        opacity: 1;
+    }
+}
+

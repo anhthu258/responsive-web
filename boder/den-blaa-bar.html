@@ -9,6 +9,7 @@
     <meta name="author" content="Aarhus Street Food, inc.">
     <title>Aarhus Street Food - Den Blå Bar</title>
     <link rel="stylesheet" href="../css/skelet-stylesheet.css">
+    <link rel="stylesheet" href="../css/den-blaa-bar.css">
 </head>
 <body>
     <div id="wrapper">
@@ -16,56 +17,310 @@
         <section>
             <div id="logo">
                 <a href="../index.html">
-                    <img src="../img/logo.svg" alt="Aarhus Street Food Logo i hvid">
+                    <img src="../img/forsiden/logo.svg" alt="Aarhus Street Food Logo i hvid">
                 </a>
             </div>
 
-            <img class="icon" src="../img/search-icon.svg" alt="Søg icon i hvid">
+            <img class="icon" src="../img/forsiden/search-icon.svg" alt="Søg icon i hvid">
         </section>
-        <nav class="navbar">
+        <nav>
             <ul>
                 <li><a href="../index.html">HOME</a></li>
-                <li><a href="../undersider/menu.html">MENU</a>
-                    <ul>
-                        <li><a href="danyar.html">Danyar - Fish & Chips</a></li>
-                        <li><a href="den-blaa-bar.html">Den Blå Bar</a></li>
-                        <li><a href="duck-it.html">Duck It!</a></li>
-                        <li><a href="mormors-koekken.html">Mormors Køkken</a></li>
-                        <li><a href="pitapita.html">Pita Pita</a></li>
-                        <li><a href="popsicle.html">Popsicle</a></li>
-                        <li><a href="vinbaran.html">Vinbaren</a></li>
-                        <li><a href="za'atar.html">Za'atar</a></li>
+                <li><a href="menu.html">MENU</a>
+                    <ul class="sub-menus">
+                        <li><a href="../boder/danyar.html">DANYAR - FISH & CHIPS</a></li>
+                        <li><a href="../boder/den-blaa-bar.html">DEN BLÅ BAR</a></li>
+                        <li><a href="../boder/duck-it.html">DUCK IT!</a></li>
+                        <li><a href="../boder/mormors-koekken.html">MORMORS KØKKEN</a></li>
+                        <li><a href="../boder/pitapita.html">PITA PITA</a></li>
+                        <li><a href="../boder/popsicle.html">POPSICLE</a></li>
+                        <li><a href="../boder/vinbaran.html">VINBAREN</a></li>
                     </ul>
                 </li>
-                <li><a href="../undersider/info.html">INFO</a>
-                <ul>
-                    <li><a href="../undersider/re-direct.html">Bord Booking</a></li>
+                <li><a href="../undersider/re-direct.html">INFO</a>
+                <ul class="sub-menus">
+                    <li><a href="../undersider/re-direct.html">BORD BOOKNING</a></li>
                 </ul>
                 </li>
                 <li><a href="../undersider/se-kortet.html">SE KORTET</a></li>
                 <li><a href="../undersider/events.html">EVENTS</a>
-                <ul>
-                    <li><a href="../undersider/was-here.html">Was here</a></li>
-                    <li><a href="../undersider/re-direct.html">Sommer Bio</a></li>
+                <ul class="sub-menus">
+                    <li><a href="../undersider/was-here.html">WAS HERE</a></li>
+                    <li><a href="../undersider/re-direct.html">SOMMER BIO</a></li>
                 </ul>
                 </li>
                 <li><a href="../undersider/re-direct.html">BESTIL MAD</a>
-                <ul>
-                    <li><a href="../undersider/re-direct.html">Dine bestilinger</a></li>
+                <ul class="sub-menus">
+                    <li><a href="../undersider/re-direct.html">DINE BESTILLINGER</a></li>
                 </ul>
                 </li>
             </ul>
         </nav>
     </header>
-    <main>
-        <!--Kontent-->>
-    </main>
-        <!-- VÆRE OBS PÅ AT ALT CONTENT SKAL BLIVE INDEN PÅ KONTAINEREN -->
+        <aside>
+            <img id="bar-logo" src="../img/den-blaa-bar/den-blaa-bar-logo.svg" alt="Den Blå Bar logo" loading="lazy">
+        </aside>
+
+        <main id="menu">
+            <section class="content">
+                <article>
+                    <h3>Nestea</h3>
+                    <div>
+                        <h4>30,-</h4>
+                        <button class="order-btn">Vælg</button>
+                    </div>
+                </article>
+                    <img src="../img/den-blaa-bar/nestea.png" alt="Nestea logo" loading="lazy">
+            </section>
+
+            <section class="content">
+                <article>
+                    <h3>Pepsi</h3>
+                    <div>
+                        <h4>30,-</h4>
+                        <button class="order-btn">Vælg</button>
+                    </div>
+                </article>
+                    <img src="../img/den-blaa-bar/pepsi.png" alt="Pepsi logo" loading="lazy">
+            </section>
+
+            <section class="content">
+                <article>
+                    <h3>Pepsi Max</h3>
+                    <div>
+                        <h4>30,-</h4>
+                        <button class="order-btn">Vælg</button>
+                    </div>
+                </article>
+                    <img src="../img/den-blaa-bar/pepsi-max.png" alt="Pepsi Max logo" loading="lazy">
+            </section>
+
+            <section class="content">
+                <article>
+                    <h3>Faxekondi</h3>
+                    <div>
+                        <h4>30,-</h4>
+                        <button class="order-btn">Vælg</button>
+                    </div>
+                </article>
+                    <img src="../img/den-blaa-bar/faxekondi.png" alt="Faxe Kondi logo" loading="lazy">
+            </section>
+
+            <section class="content">
+                <article>
+                    <h3>Faxekondi Appelsin</h3>
+                    <div>
+                        <h4>30,-</h4>
+                        <button class="order-btn">Vælg</button>
+                    </div>
+                </article>
+                    <img src="../img/den-blaa-bar/faxekondi-appelsin.png" alt="Faxe Kondi Appelsin logo" loading="lazy">
+            </section>
+
+            <section class="content">
+                <article>
+                    <h3>Carlsberg</h3>
+                    <div>
+                        <h4>40,-</h4>
+                        <button class="order-btn">Vælg</button>
+                    </div>
+                </article>
+                    <img src="../img/den-blaa-bar/carlsberg.png" alt="Carlsberg logo" loading="lazy">
+            </section>
+
+            <section class="content">
+                <article>
+                    <h3>Hancock - Sports Cola</h3>
+                    <div>
+                        <h4>30,-</h4>
+                        <button class="order-btn">Vælg</button>
+                    </div>
+                </article>
+                    <img src="../img/den-blaa-bar/sports-cola.png" alt="Hancock Sports Cola logo" loading="lazy">
+            </section>
+
+            <section class="content">
+                <article>
+                    <h3>Carlsberg Nordic</h3>
+                    <div>
+                        <h4>30,-</h4>
+                        <button class="order-btn">Vælg</button>
+                    </div>
+                </article>
+                    <img src="../img/den-blaa-bar/carlsberg-nordic.png" alt="Carlsberg Nordic logo" loading="lazy">
+            </section>
+
+            <section class="content">
+                <article>
+                    <h3>Tuburg Julebryg</h3>
+                    <div>
+                        <h4>45,-</h4>
+                        <button class="order-btn">Vælg</button>
+                    </div>
+                </article>
+                    <img src="../img/den-blaa-bar/julebryg.png" alt="Tuborg Julebryg logo" loading="lazy">
+            </section>
+
+            <section class="content">
+                <article>
+                    <h3>Tuburg Nul</h3>
+                    <div>
+                        <h4>30,-</h4>
+                        <button class="order-btn">Vælg</button>
+                    </div>
+                </article>
+                    <img src="../img/den-blaa-bar/tuborg-nul.png" alt="Tuborg Nul logo" loading="lazy">
+            </section>
+
+            <section class="content">
+                <article>
+                    <h3>Blanc 1664</h3>
+                    <div>
+                        <h4>50,-</h4>
+                        <button class="order-btn">Vælg</button>
+                    </div>
+                </article>
+                    <img src="../img/den-blaa-bar/blanc.png" alt="Blanc 1664 logo" loading="lazy">
+            </section>
+
+            <section class="content">
+                <article>
+                    <h3>Sol</h3>
+                    <div>
+                        <h4>40,-</h4>
+                        <button class="order-btn">Vælg</button>
+                    </div>
+                </article>
+                    <img src="../img/den-blaa-bar/sol.png" alt="Sol logo" loading="lazy">
+            </section>
+
+            <section class="content">
+                <article>
+                    <h3>Tail Of A Whale</h3>
+                    <div>
+                        <h4>30,-</h4>
+                        <button class="order-btn">Vælg</button>
+                    </div>
+                </article>
+                    <img src="../img/den-blaa-bar/tail-of-a-whale-beer.png" alt="Tail of a Whale logo" loading="lazy">
+            </section>
+
+            <section class="content">
+                <article>
+                    <h3>Vores Øl</h3>
+                    <div>
+                        <h4>45,-</h4>
+                        <button class="order-btn">Vælg</button>
+                    </div>
+                </article>
+                    <img src="../img/den-blaa-bar/aarhus-street-food-oel.png" alt="Tail of a Whale logo" loading="lazy">
+            </section>
+
+            <section class="content">
+                <article>
+                    <h3>Somersby</h3>
+                    <div>
+                        <h4>40,-</h4>
+                        <button class="order-btn">Vælg</button>
+                    </div>
+                </article>
+                    <img src="../img/den-blaa-bar/somersby.png" alt="Somersby logo" loading="lazy">
+            </section>
+
+            <section class="content">
+                <article>
+                    <h3>Jacobsen Yakima IPA</h3>
+                    <div>
+                        <h4>50,-</h4>
+                        <button class="order-btn">Vælg</button>
+                    </div>
+                </article>
+                    <img src="../img/den-blaa-bar/yakima-ipa.png" alt="Jacobsen Yakima IPA logo" loading="lazy">
+            </section>
+
+            <section class="content">
+                <article>
+                    <h3>Jacobsen Christmast Ale</h3>
+                    <div>
+                        <h4>50,-</h4>
+                        <button class="order-btn">Vælg</button>
+                    </div>
+                </article>
+                    <img src="../img/den-blaa-bar/christmas-ale.png" alt="Jacobsen Christmast Ale logo" loading="lazy">
+            </section>
+
+            <section class="content">
+                <article>
+                    <h3>Luscombe Cool Ginger Beer</h3>
+                    <div>
+                        <h4>30,-</h4>
+                        <button class="order-btn">Vælg</button>
+                    </div>
+                </article>
+                    <img src="../img/den-blaa-bar/ginger-oel.png" alt="Luscombe Cool Ginger Beer logo" loading="lazy">
+            </section>
+
+            <section class="content">
+                <article>
+                    <h3>Luscombe Lemonade</h3>
+                    <div>
+                        <h4>30,-</h4>
+                        <button class="order-btn">Vælg</button>
+                    </div>
+                </article>
+                    <img src="../img/den-blaa-bar/lemonade.png" alt="Luscombe Lemonade logo" loading="lazy">
+            </section>
+
+            <section class="content">
+                <article>
+                    <h3>Æble Juice - Økologisk</h3>
+                    <div>
+                        <h4>30,-</h4>
+                        <button class="order-btn">Vælg</button>
+                    </div>
+                </article>
+                    <img src="../img/den-blaa-bar/apple-juice.png" alt="Æble Juice logo" loading="lazy">
+            </section>
+
+            <section class="content">
+                <article>
+                    <h3>Egekilde</h3>
+                    <div>
+                        <h4>20,-</h4>
+                        <button class="order-btn">Vælg</button>
+                    </div>
+                </article>
+                    <img src="../img/den-blaa-bar/vand.png" alt="Egekilde logo" loading="lazy">
+            </section>
+
+            <section class="content">
+                <article>
+                    <h3>Dansk Vand</h3>
+                    <div>
+                        <h4>20,-</h4>
+                        <button class="order-btn">Vælg</button>
+                    </div>
+                </article>
+                    <img src="../img/den-blaa-bar/dansk-vand.png" alt="Dansk Vand logo" loading="lazy">
+            </section>
+
+            <section class="content">
+                <article>
+                    <h3>Saft</h3>
+                    <div>
+                        <h4>30,-</h4>
+                        <button class="order-btn">Vælg</button>
+                    </div>
+                </article>
+                    <img src="../img/den-blaa-bar/saft.png" alt="Saftevand logo" loading="lazy">
+            </section>
+
+        </main>
     </div>
 
     <div id="top"><a href="#top">Til Toppen</a></div>
     <footer>
-        <img src="../img/logo.svg" alt="Aarhus Street Food Logo i hvid">
+        <img src="../img/forsiden/logo.svg" alt="Aarhus Street Food Logo i hvid">
         <nav id="footer">
             <ul>
                 <li><a href="../undersider/re-direct.html">Masthead</a></li>

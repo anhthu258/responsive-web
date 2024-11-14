@@ -1,8 +1,6 @@
-*{                                      /*Reset alt default setting for margin og padding, dermed definere alle box-sizing til border-box*/
-    margin: 0;
-    padding: 0;
-    box-sizing:border-box;
-    font-size: 16px;
+@font-face {
+    font-family: blank-river;
+    src: url(/fonts/blank-river.ttf);
 }
 
 :root{                                  /*Definere css variables for farver for nemmere tilgang*/
@@ -19,17 +17,17 @@ article {
     min-height: 50vh;
 }
 
-header .navbar {                         /*Bestemt baggrundsfarve for navigationsbar*/
+header nav {                         /*Bestemt baggrundsfarve for navigationsbar*/
     background-color: var(--red);
     font-family:blank-river;
 }
 
-header .navbar ul li a{                 /*Styling af links i navigationsbar*/
+header nav ul li a{                 /*Styling af links i navigationsbar*/
     color: var(--white);
     background: var(--red);
 }
 
-header .navbar ul li a:hover{           /*Styling af navigationsbar under hover tilstand*/
+header nav ul li a:hover{           /*Styling af navigationsbar under hover tilstand*/
     background: var(--dark-grey);
     color: var(--white);
 }
@@ -94,13 +92,28 @@ header .navbar ul li a:hover{           /*Styling af navigationsbar under hover 
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    width: 60%;
+    max-height: 50%;
 }
 
 .content h3 {
+    color: var(--red);
     padding: 1rem;
     font-size: 2rem;
     margin-bottom: 0.5rem;
+}
+
+.content h4{
+    color: var(--red);
+    padding: 1rem;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.content div{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-left: 80%;
 }
 
 .content p {
@@ -111,7 +124,6 @@ header .navbar ul li a:hover{           /*Styling af navigationsbar under hover 
 
 .order-btn {
     padding: 10px 20px;
-    margin: 6.5rem 1rem 0;
     font-size: 1.2rem;
     background-color: var(--red);
     color: var(--white);
@@ -123,20 +135,133 @@ header .navbar ul li a:hover{           /*Styling af navigationsbar under hover 
 
 .order-btn:hover {
     background-color: var(--dark-grey);
+    transform: scale(1.05);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 @media screen and (max-width: 768px) {
+    /* Layoutjusteringer for mindre skærme */
     #menu {
-        flex-direction: column;        /* Når skærmen er smal, ændres layoutet til én kolonne */
-        align-items: center;           /* Centrerer sektionerne på små skærme */
+        flex-direction: column;        /* Stabler menu-elementerne i én kolonne */
+        align-items: center;           /* Centrerer sektionerne horisontalt */
     }
 
     .content {
-        width: 80%;                    /* Gør sektionerne bredere på små skærme */
+        width: 90%;                    /* Øger bredden af sektionerne for bedre synlighed */
+        margin: 1rem 0;                /* Tilføjer margin mellem sektionerne */
     }
 
     .content img {
-        width: 100%;                   /* Gør billederne responsivt */
+        width: 100%;                   /* Gør billederne responsive */
+        height: auto;                  /* Sikrer at billedets proportioner opretholdes */
         margin-bottom: 1rem;           /* Afstand mellem billede og tekst */
+    }
+
+    .content article {
+        max-width: 100%;               /* Tillader artiklen at strække sig helt */
+        text-align: center;            /* Centrerer teksten i artiklen */
+    }
+
+    /* Justering af skrifttypestørrelser for bedre læsbarhed */
+    .content h3 {
+        font-size: 1.5rem;             /* Gør overskriften mindre */
+    }
+
+    .content h4 {
+        font-size: 1.2rem;             /* Gør underoverskriften mindre */
+    }
+
+    .content p {
+        font-size: 0.9rem;             /* Reducerer skrifttypestørrelsen på paragrafer */
+        line-height: 1.4;              /* Øger linjeafstanden for læsbarhed */
+    }
+
+    .order-btn {
+        width: 100%;                   /* Gør bestillingsknappen fuld bredde */
+        padding: 12px 0;               /* Justerer knappadding */
+        font-size: 1.1rem;             /* Mindre skrifttypestørrelse for knapper */
+    }
+
+    /* Justering af header layout */
+    header nav ul {
+        flex-direction: column;        /* Gør navigationen vertikal */
+        align-items: center;           /* Centrerer menu-elementerne */
+    }
+
+    header nav ul li {
+        padding: 1rem 0;               /* Tilføjer afstand mellem menu-elementerne */
+    }
+
+    header nav ul li a {
+        font-size: 1.4rem;             /* Reducerer skrifttypestørrelsen for menu-links */
+    }
+
+    header nav ul li ul {
+        left: 0;                       /* Sikrer at dropdown-menuer er justeret med hovedmenuen */
+        width: 100%;                   /* Gør dropdown-menuerne fuld bredde */
+    }
+
+    /* Gør logoet mindre på mobil */
+    #logo img {
+        width: 70%;                    /* Reducerer logo-størrelsen på små skærme */
+        margin: 0 auto;
+    }
+
+    #circle {
+        width: 10rem;                  /* Reducerer størrelsen af cirklen */
+        height: 10rem;
+    }
+
+    #circle img {
+        object-fit: cover;
+        border-radius: 50%;
+    }
+
+    /* Justering af footer layout for mobil */
+    footer nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer nav ul li {
+        margin: 0.5rem 0;
+    }
+
+    footer nav ul li a {
+        font-size: 1.1rem;             /* Mindre skrifttypestørrelse for footer links */
+    }
+
+    #top a {
+        font-size: 1rem;               /* Mindre skrifttypestørrelse for "Til toppen" knappen */
+    }
+}
+
+/* Media query for tablet-enheder (768px til 1024px) */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    #menu {
+        flex-direction: row;           /* Holder menuen i rækkeformat */
+        justify-content: space-evenly; /* Fordeler menu-elementerne jævnt */
+    }
+
+    .content {
+        width: 45%;                    /* Holder sektionerne på 45% bredde for tablet */
+    }
+
+    .content img {
+        width: 50%;                    /* Sikrer at billederne er velproportionerede */
+        margin-bottom: 1rem;
+    }
+
+    .content h3 {
+        font-size: 1.8rem;             /* Gør overskriften lidt større på tablet */
+    }
+
+    .content h4 {
+        font-size: 1.3rem;
+    }
+
+    .order-btn {
+        font-size: 1.2rem;             /* Lidt større skrifttypestørrelse for tablet-knapper */
     }
 }
