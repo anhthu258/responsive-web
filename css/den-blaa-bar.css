@@ -83,6 +83,7 @@ aside {
     height: 40vh;
     margin: 2rem;
     border-radius: 5%;
+    justify-content: space-between;
 }
 
 .content:hover{
@@ -90,11 +91,11 @@ aside {
 }
 
 .content img {
-    margin: 5%;
-    width: 40%;
-    object-fit: cover;
-    border-radius: 2%;
-    overflow: hidden;
+    width: 100%;              /* Ensures the image takes the full width of the container */
+    height: auto;             /* Keeps the aspect ratio intact */
+    max-height: 100%;         /* Ensures image does not exceed container height */
+    object-fit: contain;      /* Prevents cropping while fitting the image inside the container */
+    margin-bottom: 1rem;      /* Keeps space between the image and the text below */
 }
 
 .content article {
@@ -186,7 +187,6 @@ aside {
         height: 30vh;
         margin: auto;
         border-radius: 5%;
-        background: var(--light-grey);
     }
 
     .content img {
