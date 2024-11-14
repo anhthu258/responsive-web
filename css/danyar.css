@@ -292,18 +292,31 @@ footer nav ul li a {                /* Style for links i footer navigationsbar *
         margin: 0.5rem;
     }
 
-    .dishes {
-        max-width: 90%; /* Reduces the image width on mobile */
-        padding-left: 3rem;
+    #logo-danyar{
+        min-width: 10rem;
     }
-    @media (max-width: 1024px) and (min-width: 769px) {
-    .dishes {
-            max-width: 70%; /* Slightly smaller width on tablet screens */
-            padding-left: 5rem;
-            display: grid;
-            grid-template-columns: repeat(1, 1fr);
+
+    h1{
+        left: 50%;
+        font-size: 5rem;
+    }
+
+        .dish-container {
+            grid-template-columns: 1fr; /* Single column layout */
+            margin-top: 28rem;
         }
-    }
+    
+        .dishes {
+            width: 100%; /* Full width on mobile */
+            height: auto; /* Keep aspect ratio */
+            position: relative;
+            left: -15%;
+            margin-top: 2rem;
+        }
+
+        .order-button{
+            left: 16.4rem;
+        }
 
     #top {
         right: 10px;
