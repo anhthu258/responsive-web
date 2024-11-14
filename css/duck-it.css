@@ -52,6 +52,7 @@ nav ul.sub-menus a {
     display: flex;                      /* Placere billedet i center */
     align-items: center;
     justify-content: center;
+    margin-top: 11%;
 }
 
 #circle img {
