@@ -1,3 +1,4 @@
 user-agent:*
 disallow:/
+
 (Husk at tilføje sitemap.xml)
