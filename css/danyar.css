@@ -54,10 +54,6 @@ main {
     border-radius: 0.25rem;
 }
 
-
-
-
-
 *{                                  /*Reset alt default setting for margin og padding, dermed definere alle box-sizing til border-box*/
     margin: 0;
     padding: 0;
