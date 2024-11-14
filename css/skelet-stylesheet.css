@@ -14,9 +14,10 @@
     --mid-white: #f4f4f4;
 }
 
-#header{                            /*Bestemt layout for header med brug af flexbox*/
-    display: flex;
-    justify-content: space-between;
+header{                            /*Bestemt layout for header med brug af flexbox*/
+position: fixed;
+z-index: 1000;
+width: 100%;
    
 }
 
@@ -41,7 +42,6 @@ header section{                         /*Definere placering af logo og search-i
     justify-content: space-between;
     align-items: center;
     background: var(--black);
-    z-index: 10;
 }
 
 header nav {                         /*Bestemt baggrundsfarve for navigationsbar*/
