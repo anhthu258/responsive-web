@@ -7,12 +7,12 @@
     margin: 0;
     padding: 0;
     box-sizing:border-box;
-    font-size: 16px;
+    font-size: 15px;
 }
 
 :root{                              /*Definere css variables for farver for nemmere tilgang*/
     --white: #ffffff;
-    --orange: #231c07;
+    --orange: #432818;
     --dark-grey: #222222;
     --black: #000000;
     --light-grey: #cecfca;
@@ -22,6 +22,12 @@
 #header{                            /*Bestemt layout for header med brug af flexbox*/
     display: flex;
     justify-content: space-between;
+   
+}
+
+.logo {
+    width: 150px;
+    height: auto;
 }
 
 #logo{
@@ -40,10 +46,11 @@ header section{                         /*Definere placering af logo og search-i
     justify-content: space-between;
     align-items: center;
     background: var(--black);
+    z-index: 10;
 }
 
 header nav {                         /*Bestemt baggrundsfarve for navigationsbar*/
-    background-color: var(--orange);
+    background-color: var(--black);
     font-family:blank-river;
 }
 
@@ -65,7 +72,7 @@ header nav ul li a{             /*Styling af links i navigationsbar*/
     padding: 1.5rem;
     color: rgb(255, 255, 255);
     display: block;
-    background: var(--orange);
+    background: var(#432818);
 }
 
 header nav ul li a:hover{       /*Styling af navigationsbar under hover tilstand*/
@@ -108,7 +115,7 @@ nav ul.sub-menus{
 	height: auto;
 	overflow: hidden;
 	width: 170px;
-	background: white;
+	background: #444444;
 	position: absolute;
 	z-index: 10;
 	display: none;
@@ -119,7 +126,7 @@ nav ul.sub-menus li {
 	width: 100%;
 }
 nav ul.sub-menus a {
-	color: var(--white);
+	color: var(--orange);
 	font-size: 1.25rem;
 }
 nav li:hover ul.sub-menus {
@@ -157,7 +164,7 @@ nav ul.sub-menus a:hover{
 
 footer {                            /*Styling for footer*/
     background-color: var(--light-grey);
-    color: var(--white);
+    color: var(--black);
     text-align: center;
     padding: 1.25rem;
     margin-top: 3.125rem;
@@ -193,8 +200,9 @@ footer nav ul li a {                /* Style for links i footer navigationsbar *
     color: var(--white);
 }
 
- /* Centered overlay image styling */
- .overlay-image {
+
+/* Centered overlay image styling */
+.overlay-image {
     width: 70rem; /* Adjust the size as needed */
     margin-top: 0,1rem;
     padding-left: 14rem;
@@ -209,7 +217,6 @@ footer nav ul li a {                /* Style for links i footer navigationsbar *
     object-fit: cover; /* Ensures the image covers the entire area */
     z-index: -1; /* Places the image behind other content */
 }
-
  /* Style for the centered image */
  .billederafmad {
     max-width: 90%; /* Begrænser billedets bredde */
@@ -218,23 +225,6 @@ footer nav ul li a {                /* Style for links i footer navigationsbar *
    padding-left: 8rem;
    width: 90rem;
    height: auto
-
-}
-
-   /* Style for the Buy button */
-   .buy-button {
-    display: inline-block;
-    padding: 0.5rem 3rem;
-    background-color: white; /* White background */
-    color: #333; /* Dark text color for contrast */
-    text-align: right;
-    text-decoration: none;
-    font-size: 3rem;
-    border: 2px solid #333; /* Dark border for contrast */
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    text-align: center;
 }
 
    /* Existing content */
@@ -244,19 +234,16 @@ footer nav ul li a {                /* Style for links i footer navigationsbar *
     display: flex;
     color: #333;
 }
-
 /* Hover effect */
 .buy-button:hover {
     background-color: #f1f1f1; /* Light gray background on hover */
     transform: scale(1.1); /* Slightly enlarge the button */
     text-align: center;
 }
-
 body {
     justify-content: center;
     align-items: center;
 }
-
 /* Paragraph styling with vintage theme */
 .styled-paragraph {
     max-width: 600px;
@@ -273,7 +260,6 @@ body {
     position: relative;
     font-family: 'Times New Roman', serif;
 }
-
 /* Adding a decorative pseudo-element as a floral or lace-inspired touch */
 .styled-paragraph::before {
     font-size: 2em;
@@ -283,7 +269,6 @@ body {
     left: 50%;
     transform: translateX(-50%);
 }
-
 .styled-paragraph::after {
     font-size: 2em;
     color: #c2a385;
@@ -300,14 +285,12 @@ body {
     background-size: cover;
     background-position: center;
 }
-
 /* Media query for mobile screens */
 @media (max-width: 768px) {
     .overlay-image {
         max-width: 90%; /* Reduces the image width on mobile */
         padding-left: 3rem;
     }
-
     @media (max-width: 1024px) and (min-width: 769px) {
     .overlay-image {
             max-width: 70%; /* Slightly smaller width on tablet screens */
