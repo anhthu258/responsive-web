@@ -1,3 +1,8 @@
+@font-face {
+    font-family: blank-river;
+    src: url(/fonts/blank-river.ttf);
+}
+
 *{                                  /*Reset alt default setting for margin og padding, dermed definere alle box-sizing til border-box*/
     margin: 0;
     padding: 0;
@@ -27,7 +32,7 @@
 
 #logo{
     padding: 0.938rem;
-    width: 0.000525rem;
+    width: 0.525rem;
 }
 
 .icon{
@@ -65,13 +70,13 @@ header nav ul li a{             /*Styling af links i navigationsbar*/
     text-decoration: none;
     font-size: 1.55rem;
     padding: 1.5rem;
-    color: white;
+    color: rgb(255, 255, 255);
     display: block;
     background: var(--black);
 }
 
 header nav ul li a:hover{       /*Styling af navigationsbar under hover tilstand*/
-    background: var(--dark-grey);
+    background: white;
     color: var(--orange);
 }
 
@@ -86,7 +91,7 @@ header nav ul li ul{            /*Styling af dropdown menu i navbar*/
 
 header nav ul li ul li{         /*Styling af list item i dropdown menu*/
     width: 100%;
-    border-top: 0.5px solid var(--dark-grey);
+    border-top: 0.5px solid var(--white);
 }
 
 header nav ul li ul li ul{      /*Styling af nested dropdown menu*/
@@ -192,7 +197,7 @@ footer nav ul li:last-child {       /* Fjerne margin for den sidste list item i 
 
 footer nav ul li a {                /* Style for links i footer navigationsbar */
     text-decoration: none;
-    color: var(--dark-grey);
+    color: var(--white);
 }
 
 
