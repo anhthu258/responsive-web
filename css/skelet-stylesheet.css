@@ -146,12 +146,6 @@ nav ul.sub-menus a:hover{
 	color: var(--white);
 }
 
-#wrapper {
-    min-height: 100%;               /*Definere kontents højde, dette sørge for en sticky footer der reagere med kontentet, dermed forbliver den i bunden af siden under alle forhold*/
-    display: flex;
-    flex-direction: column;
-}
-
 #top{                             /*Styling for fixed sektionen i højre bund af siden*/
     color: var(--white);
     background-color: var(--orange);
