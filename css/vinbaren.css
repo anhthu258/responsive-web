@@ -9,9 +9,13 @@
     font-size: 16px;
 }
 
+body{
+    background-color:x
+}
+
 :root{                              /*Definere css variables for farver for nemmere tilgang*/
     --white: #042706;
-    --orange: rgb(13, 67, 7);
+    --orange: #8A9A5B;
     --dark-grey: #222222;
     --black: #000000;
     --light-grey: #cecfca;
@@ -197,13 +201,13 @@ footer nav ul li a {                /* Style for links i footer navigationsbar *
     width: 30rem; /* Set width of the logo */
     height: auto; /* Auto height to maintain aspect ratio */
     display: block; /* Block display for margin auto to work */
-    margin: 20px auto; /* Center horizontally with some top and bottom margin */
+    margin: 10px auto; /* Center horizontally with some top and bottom margin */
     transition: transform 0.3s ease; /* Smooth scaling on hover */
 }
 
 h1{
     font-family: 'Times New Roman', Times, serif; /* Clean and modern sans-serif font */
-    font-size: 2em; /* Adjust size for prominence */
+    font-size: 1em; /* Adjust size for prominence */
     color: darkolivegreen; /* Dark gray for a minimalist feel */
     text-align: center; /* Center the text */
     margin: 0; /* Remove default margin */
@@ -223,23 +227,23 @@ h1{
     object-fit: cover; /* Ensures the image covers the entire area */
     z-index: -1; /* Places the image behind other content */
 }
-
 .container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center; /* Center the bottles */
+    padding-bottom: 1rem;
     align-items: center;
     width: 100%;
     height: 30vh;
     overflow: hidden;
-    background-color: #ffffff;
+    background-color: white
 }
 
 /* Individual image styles */
 .vin-flaske, .vin-flasker {
-    width: 700px;
+    width: 300px; /* Adjusted width to make bottles smaller */
     height: auto;
     opacity: 0; /* Start invisible */
-    transform: scale(0.5) rotate(0deg); /* Start small and straight */
+    transform: scale(0.5) rotate(3deg); /* Start small and straight */
     transition: transform 0.5s ease-out; /* Smooth scale-up after entrance */
 }
 
@@ -262,9 +266,13 @@ h1{
     50% {
         opacity: 0.5;
     }
-    100% {
-        transform: translateX(0) scale(1) rotate(5deg);
+    80% {
+        transform: translateX(10%) scale(1) rotate(-20deg); /* Near center */
         opacity: 1;
+    }
+    100% {
+        transform: translateX(0%) scale(1) rotate(-30deg); /* Touch position */
+        opacity: 1; /* Keep fully visible */
     }
 }
 
@@ -277,9 +285,87 @@ h1{
     50% {
         opacity: 0.5;
     }
-    100% {
-        transform: translateX(0) scale(1) rotate(-5deg);
+    80% {
+        transform: translateX(-10%) scale(1) rotate(20deg); /* Near center */
         opacity: 1;
     }
+    100% {
+        transform: translateX(0%) scale(1) rotate(30deg); /* Touch position */
+        opacity: 1; /* Keep fully visible */
+    }
+}
+#menu {
+    display: flex;  
+    flex-wrap: wrap;                    /* Sørger for, at sektionerne bryder op i flere rækker */
+    gap: 2rem;
+    justify-content: space-between;
 }
 
+.content {
+    display: flex;
+    gap: 1rem;
+    width: 45%;
+    margin: auto;
+    border-radius: 5%;
+    background: #8A9A5B
+}
+
+.content img {
+    margin: 5%;
+    width: 80%;
+    object-fit: cover;
+    border-radius: 2%;
+    overflow: hidden;
+}
+
+.content article {
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-height: 50%;
+}
+
+.content h3 {
+    color: var(--red);
+    padding: 1rem;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.content h4{
+    color: var(--red);
+    padding: 1rem;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.content div{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-left: 80%;
+}
+
+.content p {
+    padding: 0 1rem 1rem 1rem;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.order-btn {
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    background-color: var(--red);
+    color: var(--white);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.order-btn:hover {
+    background-color: var(--dark-grey);
+    transform: scale(1.05);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}

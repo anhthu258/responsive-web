@@ -42,7 +42,7 @@ html, body {
 .back-video {                                                           /* Definere videoens position under andre elementer */
     position: relative;
     z-index: 0;
-    height: 50vh;
+    height: 80vh;
     width: 100%;
     background: var(--black);
     overflow: hidden;

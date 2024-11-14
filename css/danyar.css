@@ -1,12 +1,176 @@
-main{
-    flex: 1;                        /*Definere spacen af main*/
+main {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
 }
 
-#danyar-background{
+.background-image{
+    object-fit: cover;
+    width: 100%;
+}
+
+#logo-danyar {
+    width: 10%;
+    max-width: 150px;
+    position: absolute;
+    top: 20px; /* Adjusts distance from the top */
+    left: 50%;
+    transform: translateX(-50%); /* Centers horizontally */
+}
+
+.dish-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 20px; /* Add padding if you want some space from the edges */
+    z-index: 1; /* Ensures images appear over background */
+    position: relative;
+    transform: translate(-0%, -100%)
+}
+
+.dishes {
+    width: 90%;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+    margin: 0% 5.5%;
 }
 
 
 
+*{                                  /*Reset alt default setting for margin og padding, dermed definere alle box-sizing til border-box*/
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+    font-size: 16px;
+}
+
+:root{                              /*Definere css variables for farver for nemmere tilgang*/
+    --white: #ffffff;
+    --orange: #ff9327;
+    --dark-grey: #222222;
+    --black: #000000;
+    --light-grey: #cecfca;
+    --mid-white: #f4f4f4;
+}
+
+#header{                            /*Bestemt layout for header med brug af flexbox*/
+    display: flex;
+    justify-content: space-between;
+}
+
+#logo{
+    padding: 0.938rem;
+    width: 0.525rem;
+}
+
+.icon{
+    width: 1.875rem;
+    margin: 0.625rem;
+}
+
+header section{                         /*Definere placering af logo og search-icon, dermed baggrundsfarve*/
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--black);
+    z-index: 10;
+}
+
+header nav {                         /*Bestemt baggrundsfarve for navigationsbar*/
+    background-color:rgb(9, 68, 100);
+    font-family: blank-river;
+}
+
+header nav ul{                  /*Styling af navigationsbar*/
+    list-style: none;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+header nav ul li{               /*Definere position af navigationsbar listitem*/
+    position: relative;
+    padding: 1.5 1.5rem;
+}
+
+header nav ul li a{             /*Styling af links i navigationsbar*/
+    text-decoration: none;
+    font-size: 1.55rem;
+    padding: 1.5rem;
+    color: white;
+    display: block;
+    background: rgb(9, 68, 100);
+}
+
+header nav ul li a:hover{       /*Styling af navigationsbar under hover tilstand*/
+    background: rgb(29, 91, 124);;
+    color: var(--orange);
+}
+
+header nav ul li ul{            /*Styling af dropdown menu i navbar*/
+    position: absolute;
+    left: 0;
+    width: 100%;                    /*Definere at den skal udfylde hele siden*/
+    background: var(--orange);
+    display: none;
+    z-index: 10;                    /*Styrer stablingrækkefølge højere værdi ligger øverst, i denne tilfælde ligger alt under ul øverst for alle andre elementer*/
+}
+
+header nav ul li ul li{         /*Styling af list item i dropdown menu*/
+    width: 100%;
+    border-top: 0.5px solid rgb(27, 106, 148);
+}
+
+header nav ul li ul li ul{      /*Styling af nested dropdown menu*/
+    left: 12.5rem;
+    top: 0;
+}
+
+header nav ul li:focus-within > ul,
+header nav ul li:hover > ul{     /*Definere display af dropdown menu på hover eller fokus*/
+    display: block;
+    z-index: 10;                     /*Styrer stablingrækkefølge højere værdi ligger øverst, i denne tilfælde ligger alt under ul øverst for alle andre elementer*/
+}
+
+header::after {                     /*Fjern floats efter header content*/
+    content: "";
+    display: table;
+    clear: both;
+}
+
+nav ul.sub-menus{
+	height: auto;
+	overflow: hidden;
+	width: 170px;
+	background: rgb(9, 68, 100);
+	position: absolute;
+	z-index: 10;
+	display: none;
+}
+nav ul.sub-menus li {
+	display: block;
+	text-align: left;
+	width: 100%;
+}
+nav ul.sub-menus a {
+	color: white;
+	font-size: 1.25rem;
+}
+nav li:hover ul.sub-menus {
+	display: block
+}
+nav ul.sub-menus a:hover{
+	background: var(--orange);
+	color: var(--white);
+}
+
+#wrapper {
+    min-height: 100%;               /*Definere kontents højde, dette sørge for en sticky footer der reagere med kontentet, dermed forbliver den i bunden af siden under alle forhold*/
+    display: flex;
+    flex-direction: column;
+}
 
 #top{                             /*Styling for fixed sektionen i højre bund af siden*/
     color: var(--white);
@@ -20,16 +184,11 @@ main{
 }
 
 #top a{                           /*Styling for links i top*/
-    color: var(--black);
+    color: var(--white);
     text-decoration: none;
     font-family: serif;
     font-weight: 300;
     font-style: bold;
-}
-
-top :hover{
-    background: var(--dark-grey);
-    color: var(--orange);
 }
 
 footer {                            /*Styling for footer*/
@@ -69,3 +228,5 @@ footer nav ul li a {                /* Style for links i footer navigationsbar *
     text-decoration: none;
     color: var(--dark-grey);
 }
+
+
