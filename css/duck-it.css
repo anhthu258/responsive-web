@@ -188,9 +188,15 @@ nav ul.sub-menus a {
     }
 
     /* Justering af header layout */
+
+    header section{
+        padding: 5%;
+    }
+
     header nav ul {
         flex-direction: column;
         gap: 0.5rem;
+        display: none;
     }
 
     header nav ul li {
@@ -215,6 +221,7 @@ nav ul.sub-menus a {
     #circle {
         width: 10rem;                  /* Reducerer størrelsen af cirklen */
         height: 10rem;
+        
     }
 
     #circle img {
