@@ -5,6 +5,20 @@
     height: 100vh;
     object-fit: cover;
     z-index: -1;
+    }
+
+
+    main{
+    flex: 1;                        /*Definere spacen af main*/
+}
+
+#danyar-background{
+}
+
+
+#top{                             /*Styling for fixed sektionen i højre bund af siden*/
+    color: var(--white);
+    background-color: var(--orange);
     position: fixed;
 }
 
