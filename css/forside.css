@@ -22,15 +22,14 @@
     --mid-white: #f4f4f4;
 }
 
-article{                                                             /*Posisition af baggrundsbillede*/
+#back-img {
     background-image: url(/img/forsiden/background-empty.png);
     background-size: cover;
     background-repeat: no-repeat;
-    height: 190rem;
     background-position: center;
-    padding: 0 50px;
-    box-sizing: border-box;
+    height: 190rem;
     min-height: 100vh;
+    box-sizing: border-box;
 }
 
 .back-video {                                                           /* Definere videoens position under andre elementer */
