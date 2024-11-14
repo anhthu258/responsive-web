@@ -197,13 +197,13 @@ footer nav ul li a {                /* Style for links i footer navigationsbar *
     width: 30rem; /* Set width of the logo */
     height: auto; /* Auto height to maintain aspect ratio */
     display: block; /* Block display for margin auto to work */
-    margin: 20px auto; /* Center horizontally with some top and bottom margin */
+    margin: 10px auto; /* Center horizontally with some top and bottom margin */
     transition: transform 0.3s ease; /* Smooth scaling on hover */
 }
 
 h1{
     font-family: 'Times New Roman', Times, serif; /* Clean and modern sans-serif font */
-    font-size: 2em; /* Adjust size for prominence */
+    font-size: 1em; /* Adjust size for prominence */
     color: darkolivegreen; /* Dark gray for a minimalist feel */
     text-align: center; /* Center the text */
     margin: 0; /* Remove default margin */
@@ -223,10 +223,9 @@ h1{
     object-fit: cover; /* Ensures the image covers the entire area */
     z-index: -1; /* Places the image behind other content */
 }
-
 .container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center; /* Center the bottles */
     align-items: center;
     width: 100%;
     height: 30vh;
@@ -236,10 +235,10 @@ h1{
 
 /* Individual image styles */
 .vin-flaske, .vin-flasker {
-    width: 700px;
+    width: 300px; /* Adjusted width to make bottles smaller */
     height: auto;
     opacity: 0; /* Start invisible */
-    transform: scale(0.5) rotate(0deg); /* Start small and straight */
+    transform: scale(0.5) rotate(3deg); /* Start small and straight */
     transition: transform 0.5s ease-out; /* Smooth scale-up after entrance */
 }
 
@@ -262,9 +261,13 @@ h1{
     50% {
         opacity: 0.5;
     }
-    100% {
-        transform: translateX(0) scale(1) rotate(5deg);
+    80% {
+        transform: translateX(10%) scale(1) rotate(-20deg); /* Near center */
         opacity: 1;
+    }
+    100% {
+        transform: translateX(0%) scale(1) rotate(-30deg); /* Touch position */
+        opacity: 1; /* Keep fully visible */
     }
 }
 
@@ -277,9 +280,12 @@ h1{
     50% {
         opacity: 0.5;
     }
-    100% {
-        transform: translateX(0) scale(1) rotate(-5deg);
+    80% {
+        transform: translateX(-10%) scale(1) rotate(20deg); /* Near center */
         opacity: 1;
     }
+    100% {
+        transform: translateX(0%) scale(1) rotate(30deg); /* Touch position */
+        opacity: 1; /* Keep fully visible */
+    }
 }
-
