@@ -58,24 +58,24 @@ header section{                         /*Definere placering af logo og search-i
     background: var(--black);
 }
 
-nav {                         /*Bestemt baggrundsfarve for navigationsbar*/
+header nav {                         /*Bestemt baggrundsfarve for navigationsbar*/
     background-color: var(--black);
     font-family:blank-river;
 }
 
-nav ul{                  /*Styling af navigationsbar*/
+header nav ul{                  /*Styling af navigationsbar*/
     list-style: none;
     width: 100%;
     display: flex;
     justify-content: space-around;
 }
 
-nav ul li{               /*Definere position af navigationsbar listitem*/
+header nav ul li{               /*Definere position af navigationsbar listitem*/
     position: relative;
     padding: 1.5 1.5rem;
 }
 
-nav ul li a{             /*Styling af links i navigationsbar*/
+header nav ul li a{             /*Styling af links i navigationsbar*/
     text-decoration: none;
     font-size: 1.55rem;
     padding: 1.5rem;
@@ -209,6 +209,12 @@ footer nav ul li:last-child {       /* Fjerne margin for den sidste list item i 
 footer nav ul li a {                /* Style for links i footer navigationsbar */
     text-decoration: none;
     color: var(--dark-grey);
+}
+
+@media screen and (max-width: 768px){
+    .nav-bar{
+        display: none;
+    }
 }
 
 
