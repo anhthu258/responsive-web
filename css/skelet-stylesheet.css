@@ -1,3 +1,17 @@
+@font-face {
+    font-family:big-noodle;
+    src: url(/fonts/big-noodle.ttf)
+    }
+
+@font-face {
+    font-family:big-noodle-italic;
+    src: url(/fonts/big-noodle-italic.ttf)
+}
+
+@font-face {
+    font-family: blank-river;
+    src: url(/fonts/blank-river.ttf);
+}
 *{                                  /*Reset alt default setting for margin og padding, dermed definere alle box-sizing til border-box*/
     margin: 0;
     padding: 0;
@@ -145,8 +159,9 @@ nav ul.sub-menus a:hover{
     bottom: 0;
     right: 50px;
     padding: 20px;
-    font-size: 18px;
+    font-size: 25px;
     z-index: 9;
+    letter-spacing: 10%;
 }
 
 #top a{                           /*Styling for links i top*/
@@ -154,7 +169,8 @@ nav ul.sub-menus a:hover{
     text-decoration: none;
     font-family: serif;
     font-weight: 300;
-    font-style: bold;
+    font-family: big-noodle;
+    letter-spacing: 2px;
 }
 
 footer {                            /*Styling for footer*/
