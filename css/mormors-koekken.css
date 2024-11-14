@@ -12,7 +12,7 @@
 
 :root{                              /*Definere css variables for farver for nemmere tilgang*/
     --white: #ffffff;
-    --orange: #ff670953;
+    --orange: #432818;
     --dark-grey: #222222;
     --black: #000000;
     --light-grey: #cecfca;
@@ -72,7 +72,7 @@ header nav ul li a{             /*Styling af links i navigationsbar*/
     padding: 1.5rem;
     color: rgb(255, 255, 255);
     display: block;
-    background: var(--black);
+    background: var(#432818);
 }
 
 header nav ul li a:hover{       /*Styling af navigationsbar under hover tilstand*/
