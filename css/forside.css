@@ -95,9 +95,9 @@ html, body {
     color: white;
     font-family: big-noodle;
     position: absolute;
-    font-size: 475%;
-    right: 33vh;
-    top: 137.5vh;
+    font-size: 5rem;
+    right: 300px;
+    top: 1150px;
     transform: rotate(15deg);
     letter-spacing: 8px;
 }
@@ -106,9 +106,9 @@ html, body {
     color: #646565;
     font-family: big-noodle;
     position: absolute;
-    font-size: 8vh;
-    right: 2.5vh;
-    top: 126.5vh;
+    font-size: 5rem;
+    right: 10px;
+    top: 1055px;
     transform: rotate(-25deg);
     letter-spacing: 8px;
 }
@@ -116,19 +116,11 @@ html, body {
     color: #646565;
     font-family: big-noodle;
     position: absolute;
-    font-size: 6rem;
-    right: 250px;
-    top: 1490px;
+    font-size: 5rem;
+    right: 270px;
+    top: 1500px;
     letter-spacing: 8px;
     transform: rotate(-19deg);
-}
-
-#try{
-    color: white;
-    font-family: big-noodle;
-    position: absolute;
-    right: 100px;
-    top: 1000px;
 }
 
 .grid{                                                                   /*Definere spacen af main*/
