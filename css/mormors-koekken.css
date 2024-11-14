@@ -1,50 +1,33 @@
-<<<<<<< HEAD
-
-*{                              /*Reset alt default setting for margin og padding, dermed definere alle box-sizing til border-box*/
-=======
-@font-face {
-    font-family: blank-river;
-    src: url(/fonts/blank-river.ttf);
-}
-
 *{                                  /*Reset alt default setting for margin og padding, dermed definere alle box-sizing til border-box*/
->>>>>>> 5793d073a97b8259d3f687af30ed7e8ab3d91b51
     margin: 0;
     padding: 0;
     box-sizing:border-box;
-    font-size: 16px;
+    font-size: 15px;
 }
 
-<<<<<<< HEAD
-:root{                          /*Definere css variables for farver for nemmere tilgang*/ /*MANGLER*/
-    --white: #ffffff;
-    --orange: #ff9327;
-    --dark-grey: #222222;
-    --black: #000000;
-    --light-grey: #cecfca;
-=======
 :root{                              /*Definere css variables for farver for nemmere tilgang*/
     --white: #ffffff;
-    --orange: #231c07;
+    --orange: #ff670953;
     --dark-grey: #222222;
     --black: #000000;
     --light-grey: #cecfca;
     --mid-white: #f4f4f4;
->>>>>>> 5793d073a97b8259d3f687af30ed7e8ab3d91b51
 }
 
 #header{                            /*Bestemt layout for header med brug af flexbox*/
     display: flex;
     justify-content: space-between;
+   
+}
+
+.logo {
+    width: 150px;
+    height: auto;
 }
 
 #logo{
-<<<<<<< HEAD
-    width: 0.938rem;
-=======
     padding: 0.938rem;
-    width: 0.525rem;
->>>>>>> 5793d073a97b8259d3f687af30ed7e8ab3d91b51
+    width: 0.000525rem;
 }
 
 .icon{
@@ -58,39 +41,21 @@ header section{                         /*Definere placering af logo og search-i
     justify-content: space-between;
     align-items: center;
     background: var(--black);
+    z-index: 10;
 }
 
-<<<<<<< HEAD
-header .navbar {                         /*Bestemt baggrundsfarve for navigationsbar*/
-    background-color: var(--orange);     /*skal ændre til den rigtige farve*/ /*MANGLER*/
-}
-
-header .navbar ul{                  /*Styling af navigationsbar*/
-=======
 header nav {                         /*Bestemt baggrundsfarve for navigationsbar*/
-    background-color: var(--orange);
+    background-color: var(--black);
     font-family:blank-river;
 }
 
 header nav ul{                  /*Styling af navigationsbar*/
->>>>>>> 5793d073a97b8259d3f687af30ed7e8ab3d91b51
     list-style: none;
     width: 100%;
     display: flex;
     justify-content: space-around;
 }
 
-<<<<<<< HEAD
-header .navbar ul li{               /*Definere position af navigationsbar listitem*/
-    position: relative;
-}
-
-header .navbar ul li a{             /*Styling af links i navigationsbar*/
-    text-decoration: none;
-    font-size: 1.25rem;
-    padding: 1.125rem;
-    color: black;
-=======
 header nav ul li{               /*Definere position af navigationsbar listitem*/
     position: relative;
     padding: 1.5 1.5rem;
@@ -100,27 +65,17 @@ header nav ul li a{             /*Styling af links i navigationsbar*/
     text-decoration: none;
     font-size: 1.55rem;
     padding: 1.5rem;
-    color: rgb(255, 255, 255);
->>>>>>> 5793d073a97b8259d3f687af30ed7e8ab3d91b51
+    color: white;
     display: block;
-    background: var(--orange);
+    background: var(--black);
 }
 
-<<<<<<< HEAD
-header .navbar ul li a:hover{       /*Styling af navigationsbar under hover tilstand*/
+header nav ul li a:hover{       /*Styling af navigationsbar under hover tilstand*/
     background: var(--dark-grey);
     color: var(--orange);
 }
 
-header .navbar ul li ul{            /*Styling af dropdown menu i navbar*/
-=======
-header nav ul li a:hover{       /*Styling af navigationsbar under hover tilstand*/
-    background: white;
-    color: var(--orange);
-}
-
 header nav ul li ul{            /*Styling af dropdown menu i navbar*/
->>>>>>> 5793d073a97b8259d3f687af30ed7e8ab3d91b51
     position: absolute;
     left: 0;
     width: 100%;                    /*Definere at den skal udfylde hele siden*/
@@ -129,32 +84,18 @@ header nav ul li ul{            /*Styling af dropdown menu i navbar*/
     z-index: 10;                    /*Styrer stablingrækkefølge højere værdi ligger øverst, i denne tilfælde ligger alt under ul øverst for alle andre elementer*/
 }
 
-<<<<<<< HEAD
-header .navbar ul li ul li{         /*Styling af list item i dropdown menu*/
+header nav ul li ul li{         /*Styling af list item i dropdown menu*/
     width: 100%;
     border-top: 0.5px solid var(--dark-grey);
 }
 
-header .navbar ul li ul li ul{      /*Styling af nested dropdown menu*/
-=======
-header nav ul li ul li{         /*Styling af list item i dropdown menu*/
-    width: 100%;
-    border-top: 0.5px solid var(--white);
-}
-
 header nav ul li ul li ul{      /*Styling af nested dropdown menu*/
->>>>>>> 5793d073a97b8259d3f687af30ed7e8ab3d91b51
     left: 12.5rem;
     top: 0;
 }
 
-<<<<<<< HEAD
-header .navbar ul li:focus-within > ul,
-header .navbar ul li:hover > ul{     /*Definere display af dropdown menu på hover eller fokus*/
-=======
 header nav ul li:focus-within > ul,
 header nav ul li:hover > ul{     /*Definere display af dropdown menu på hover eller fokus*/
->>>>>>> 5793d073a97b8259d3f687af30ed7e8ab3d91b51
     display: block;
     z-index: 10;                     /*Styrer stablingrækkefølge højere værdi ligger øverst, i denne tilfælde ligger alt under ul øverst for alle andre elementer*/
 }
@@ -165,13 +106,11 @@ header::after {                     /*Fjern floats efter header content*/
     clear: both;
 }
 
-<<<<<<< HEAD
-=======
 nav ul.sub-menus{
 	height: auto;
 	overflow: hidden;
 	width: 170px;
-	background: white;
+	background: #444444;
 	position: absolute;
 	z-index: 10;
 	display: none;
@@ -182,7 +121,7 @@ nav ul.sub-menus li {
 	width: 100%;
 }
 nav ul.sub-menus a {
-	color: var(--white);
+	color: var(--orange);
 	font-size: 1.25rem;
 }
 nav li:hover ul.sub-menus {
@@ -193,20 +132,12 @@ nav ul.sub-menus a:hover{
 	color: var(--white);
 }
 
->>>>>>> 5793d073a97b8259d3f687af30ed7e8ab3d91b51
 #wrapper {
     min-height: 100%;               /*Definere kontents højde, dette sørge for en sticky footer der reagere med kontentet, dermed forbliver den i bunden af siden under alle forhold*/
     display: flex;
     flex-direction: column;
 }
 
-<<<<<<< HEAD
-main{
-    flex: 1;                        /*Definere spacen af main*/
-}
-
-#top{                             /*Styling for fixed sektionen i højre bund af siden*/
-=======
 #top{                             /*Styling for fixed sektionen i højre bund af siden*/
     color: var(--white);
     background-color: var(--orange);
@@ -228,7 +159,7 @@ main{
 
 footer {                            /*Styling for footer*/
     background-color: var(--light-grey);
-    color: var(--white);
+    color: var(--black);
     text-align: center;
     padding: 1.25rem;
     margin-top: 3.125rem;
@@ -261,12 +192,12 @@ footer nav ul li:last-child {       /* Fjerne margin for den sidste list item i 
 
 footer nav ul li a {                /* Style for links i footer navigationsbar */
     text-decoration: none;
->>>>>>> 5793d073a97b8259d3f687af30ed7e8ab3d91b51
-    color: var(--white);
+    color: var(--dark-grey);
 }
 
- /* Centered overlay image styling */
- .overlay-image {
+
+/* Centered overlay image styling */
+.overlay-image {
     width: 70rem; /* Adjust the size as needed */
     margin-top: 0,1rem;
     padding-left: 14rem;
@@ -281,7 +212,6 @@ footer nav ul li a {                /* Style for links i footer navigationsbar *
     object-fit: cover; /* Ensures the image covers the entire area */
     z-index: -1; /* Places the image behind other content */
 }
-
  /* Style for the centered image */
  .billederafmad {
     max-width: 90%; /* Begrænser billedets bredde */
@@ -290,23 +220,6 @@ footer nav ul li a {                /* Style for links i footer navigationsbar *
    padding-left: 8rem;
    width: 90rem;
    height: auto
-
-}
-
-   /* Style for the Buy button */
-   .buy-button {
-    display: inline-block;
-    padding: 0.5rem 3rem;
-    background-color: white; /* White background */
-    color: #333; /* Dark text color for contrast */
-    text-align: right;
-    text-decoration: none;
-    font-size: 3rem;
-    border: 2px solid #333; /* Dark border for contrast */
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    text-align: center;
 }
 
    /* Existing content */
@@ -316,19 +229,16 @@ footer nav ul li a {                /* Style for links i footer navigationsbar *
     display: flex;
     color: #333;
 }
-
 /* Hover effect */
 .buy-button:hover {
     background-color: #f1f1f1; /* Light gray background on hover */
     transform: scale(1.1); /* Slightly enlarge the button */
     text-align: center;
 }
-
 body {
     justify-content: center;
     align-items: center;
 }
-
 /* Paragraph styling with vintage theme */
 .styled-paragraph {
     max-width: 600px;
@@ -345,7 +255,6 @@ body {
     position: relative;
     font-family: 'Times New Roman', serif;
 }
-
 /* Adding a decorative pseudo-element as a floral or lace-inspired touch */
 .styled-paragraph::before {
     font-size: 2em;
@@ -355,7 +264,6 @@ body {
     left: 50%;
     transform: translateX(-50%);
 }
-
 .styled-paragraph::after {
     font-size: 2em;
     color: #c2a385;
@@ -372,14 +280,12 @@ body {
     background-size: cover;
     background-position: center;
 }
-
 /* Media query for mobile screens */
 @media (max-width: 768px) {
     .overlay-image {
         max-width: 90%; /* Reduces the image width on mobile */
         padding-left: 3rem;
     }
-
     @media (max-width: 1024px) and (min-width: 769px) {
     .overlay-image {
             max-width: 70%; /* Slightly smaller width on tablet screens */
