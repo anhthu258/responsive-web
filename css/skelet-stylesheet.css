@@ -2,12 +2,12 @@
     margin: 0;
     padding: 0;
     box-sizing:border-box;
-    font-size: 16px;
+    font-size: 15px;
 }
 
 :root{                              /*Definere css variables for farver for nemmere tilgang*/
     --white: #ffffff;
-    --orange: #ff9327;
+    --orange: #ff670953;
     --dark-grey: #222222;
     --black: #000000;
     --light-grey: #cecfca;
@@ -17,11 +17,17 @@
 #header{                            /*Bestemt layout for header med brug af flexbox*/
     display: flex;
     justify-content: space-between;
+   
+}
+
+.logo {
+    width: 150px;
+    height: auto;
 }
 
 #logo{
     padding: 0.938rem;
-    width: 0.525rem;
+    width: 0.000525rem;
 }
 
 .icon{
@@ -39,7 +45,7 @@ header section{                         /*Definere placering af logo og search-i
 }
 
 header nav {                         /*Bestemt baggrundsfarve for navigationsbar*/
-    background-color: var(--orange);
+    background-color: var(--black);
     font-family:blank-river;
 }
 
@@ -59,9 +65,9 @@ header nav ul li a{             /*Styling af links i navigationsbar*/
     text-decoration: none;
     font-size: 1.55rem;
     padding: 1.5rem;
-    color: black;
+    color: white;
     display: block;
-    background: var(--orange);
+    background: var(--black);
 }
 
 header nav ul li a:hover{       /*Styling af navigationsbar under hover tilstand*/
@@ -115,7 +121,7 @@ nav ul.sub-menus li {
 	width: 100%;
 }
 nav ul.sub-menus a {
-	color: var(--black);
+	color: var(--orange);
 	font-size: 1.25rem;
 }
 nav li:hover ul.sub-menus {
