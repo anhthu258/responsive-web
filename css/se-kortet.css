@@ -46,14 +46,13 @@ main{
 main img{
     margin-top: 2.813rem;
     max-width: fit-content;
-
+    width: 50rem;
 }
 
 /* Tablet */
 @media (max-width: 768px) {
     header nav ul {
-        flex-direction: column;                     /* Navigationspunkter i én kolonne */
-        align-items: center;
+        display: none;
     }
 
     header nav ul li {
