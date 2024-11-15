@@ -181,6 +181,9 @@ html, body {
     height: 190rem;
 }
 
+.phone{
+    display: none;
+}
     @media screen and (max-width: 768px) {
         .grid, .skilt, #kort, #events, #info{
             display: none;
@@ -205,10 +208,10 @@ html, body {
         }
 
         #tilbud{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-top: 10rem;
+            position: absolute;
+            top: 55rem;
+            right: 0;
+
         }
         
     
@@ -219,7 +222,6 @@ html, body {
     
         #tilbud h3 {
             font-size: 6rem;
-            left: 15rem;
             top: 9rem;
         }
     
@@ -233,7 +235,7 @@ html, body {
             background: url(../img/forsiden/background-phone.png);
             background-size: cover;
             background-repeat: no-repeat;
-            background-position: center;
+            background-position: center right;
             box-sizing: border-box;
         }
     
@@ -256,10 +258,28 @@ html, body {
         footer nav ul li {
             margin-right: 0.5rem;
         }
+        .phone{
+            display: flex;
+            flex-wrap:nowrap;
+            flex-direction: column;
+            align-items: start;
+            padding-top: 750px;
+            padding-left: 5%;
+   
+        }
+        .phone img{
+            display: flex;
+            width: 300px;
+        }
     }
     
     /* Media query for tablet (768px til 1024px) */
     @media screen and (min-width: 769px) and (max-width: 1024px) {
+        
+        .grid, .skilt, #kort, #events, #info{
+            display: none;
+        }
+
         header nav ul {
             flex-direction: row;
             justify-content: space-around;
@@ -277,9 +297,14 @@ html, body {
             width: 1.75rem;
             margin: 0.7rem;
         }
-    
+        #tilbud{
+            margin-left: 25%;
+        }
         #tilbud h2 {
             font-size: 6rem;
+        }
+        #popsiclep{
+            transform: scale(0.9,0.9) rotate(25deg);;
         }
     
         #tilbud h3 {
@@ -300,5 +325,30 @@ html, body {
         footer img {
             width: 100%;
             max-width: 22rem;
+        }
+        #back-img{
+            background: url(../img/forsiden/background-tablet.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center right;
+            box-sizing: border-box;
+            max-height:110rem;
+        }
+
+        .phone{
+            display: flex;
+            flex-wrap :wrap;
+            flex-direction: row;
+            align-items: center;
+            padding-top: 380px;
+            justify-content: center;
+            margin-right: 100px;
+   
+        }
+        .phone img{
+            display: flex;
+            width:35vh;
+            flex-basis: 35%;
+            padding: 20px;
         }
     }
