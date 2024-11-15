@@ -114,6 +114,7 @@ h1{
 #header{                                /*Bestemt layout for header med brug af flexbox*/
     display: flex;
     justify-content: space-between;
+    z-index: 10;
 }
 
 #logo{
@@ -138,6 +139,7 @@ header section{                         /*Definere placering af logo og search-i
 header nav {                            /*Bestemt baggrundsfarve for navigationsbar*/
     background-color: var(--dark-blue);
     font-family: blank-river;
+    z-index: 10;
 }
 
 header nav ul{                          /*Styling af navigationsbar*/
