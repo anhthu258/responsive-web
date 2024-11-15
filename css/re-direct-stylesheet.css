@@ -5,6 +5,14 @@
     --black: #000000;
     --light-grey: #cecfca;
 }
+body{
+    background-image: url(/img/forsiden/background-update.png);
+    background-size: cover;
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    height: auto;
+    width: 100%;
+}
 
 #konstruktion {                     /*Definere layout for construction*/
     display: flex;
@@ -13,12 +21,14 @@
     align-items: center;
     flex-direction: column;
     padding-top: 15%;
+    font-family: big-noodle;
 }
 
 #konstruktion h2 {                  /*Styling for main heading h1 i construction*/
     margin: 2.5rem;
     color: var(--orange);
-    font-size: 3.125rem;
+    font-size: 3.5rem;
+    padding-top: 6.3rem;
 }
 
 #konstruktion a{                     /*Styling for links i construction*/
@@ -31,5 +41,46 @@
 
 main img{
     margin: 0.625rem;
-    width: 10%;
+    width: 25%;
+    background-color: rgb(241, 234, 50);
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    overflow: hidden;
+}
+
+#top{
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+main{
+    padding-bottom: 10rem;
+}
+
+footer{
+    background-color: #000000;
+    color: white;
+
+}
+
+footer nav ul li a{
+
+    color: white;
+    
+}
+
+@media (max-width: 740px){
+    #konstruktion h2{
+        font-size: 2rem;
+    
+}
+
+header nav{
+    display: none;
+}
+
+main img{
+    margin: 0.625rem;
+    width: 45%;
+
+}
 }

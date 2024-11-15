@@ -182,6 +182,7 @@ footer {                            /*Styling for footer*/
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    font-family: big-noodle;
         z-index: 2;
 }
 

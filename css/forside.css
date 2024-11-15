@@ -80,7 +80,7 @@ html, body {
     top: 8rem;
     left: 18.5rem;
     z-index: 2;                                                         /* Sikrer, at h3 vises over h2 */
-    rotate: -25deg;
+    transform: rotate(-25deg);
 }
 
 #tilbud p{
@@ -250,7 +250,9 @@ html, body {
             z-index: 2;
         }  
     }
-
+    footer{
+        font-family: big-noodle;
+    }
     @media screen and (max-width: 768px) {
         .grid, .skilt, #kort, #events, #info{
             display: none;
