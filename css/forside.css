@@ -257,6 +257,8 @@ html, body {
     footer nav ul li a{
         color: white;
     }
+
+
     @media screen and (max-width: 768px) {
         .grid, .skilt, #kort, #events, #info{
             display: none;
@@ -345,7 +347,32 @@ html, body {
             width: 300px;
         }
     }
+    @media (max-width: 450px){
+
+        .phone img{
+            width: 270px;
+        }
+
+        #tilbud{
+            margin-left: 0;
+            left: 4rem;
+        }
+        #tilbud h2 {
+            font-size: 4rem;
+        }
     
+        #tilbud h3 {
+            font-size: 3rem;
+            left: 9rem;
+            top: 6.55rem;
+        }
+    
+        #tilbud p {
+            font-size: 1rem;
+            width: 13.5rem;
+
+        }
+    }    
     /* Media query for tablet (768px til 1024px) */
     @media screen and (min-width: 769px) and (max-width: 1240px) {
         
