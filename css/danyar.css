@@ -33,7 +33,8 @@ main {
 }
 #danyar-banner {
 position: absolute;
-top: -80px;
+top: -30px;
+overflow: hidden;
 right: 0;
 }
 
