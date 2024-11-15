@@ -27,10 +27,14 @@ main {
     padding-top: 2rem;
 }
 
+.logo-container{
+    position: relative;
+    padding-bottom: 5rem;
+}
 #danyar-banner {
-    max-width: 100%;
-    position: absolute;
-    top: -7rem;
+position: absolute;
+top: -80px;
+right: 0;
 }
 
 #logo-danyar{
