@@ -1,3 +1,20 @@
+*{                                      /*Reset alt default setting for margin og padding, dermed definere alle box-sizing til border-box*/
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+    font-size: 1rem;
+}
+
+:root{                                  /*Definere css variables for farver for nemmere tilgang*/
+    --white: #ffffff;
+    --orange: #ff9327;
+    --dark-grey: #222222;
+    --black: #000000;
+    --light-grey: #cecfca;
+    --dark-blue: rgb(4, 6, 59);
+    --light-blue: rgb(10, 13, 86);
+}
+
 main {
     position: relative;
     width: 100vw;
@@ -22,7 +39,7 @@ main {
     top: 3rem;
     position: absolute;
     left: 50%;
-    transform: translateX(-50%); /* Centers horizontally */
+    transform: translateX(-50%);        /* Centers horizontally */
 }
 
 @font-face {
@@ -54,7 +71,7 @@ h1{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     padding: 1.1rem;
-    margin-top: 18rem; /* Adjust this as needed for spacing below header */
+    margin-top: 18rem;                  /* Adjust this as needed for spacing below header */
     margin-bottom: 8rem;
 }
 
@@ -73,7 +90,7 @@ h1{
 
 .order-button {
     position: absolute;
-    bottom: 0.2rem; /* Positions the button at the bottom of the image */
+    bottom: 0.2rem;                     /* Positions the button at the bottom of the image */
     left: 70%;
     transform: translateX(-50%);
     background-color: #ff9327;
@@ -94,25 +111,7 @@ h1{
     cursor: pointer;
 }
 
-
-*{                                  /*Reset alt default setting for margin og padding, dermed definere alle box-sizing til border-box*/
-    margin: 0;
-    padding: 0;
-    box-sizing:border-box;
-    font-size: 1rem;
-}
-
-:root{                              /*Definere css variables for farver for nemmere tilgang*/
-    --white: #ffffff;
-    --orange: #ff9327;
-    --dark-grey: #222222;
-    --black: #000000;
-    --light-grey: #cecfca;
-    --dark-blue: rgb(4, 6, 59);
-    --light-blue: rgb(10, 13, 86);
-}
-
-#header{                            /*Bestemt layout for header med brug af flexbox*/
+#header{                                /*Bestemt layout for header med brug af flexbox*/
     display: flex;
     justify-content: space-between;
 }
@@ -136,24 +135,24 @@ header section{                         /*Definere placering af logo og search-i
     z-index: 10;
 }
 
-header nav {                         /*Bestemt baggrundsfarve for navigationsbar*/
+header nav {                            /*Bestemt baggrundsfarve for navigationsbar*/
     background-color: var(--dark-blue);
     font-family: blank-river;
 }
 
-header nav ul{                  /*Styling af navigationsbar*/
+header nav ul{                          /*Styling af navigationsbar*/
     list-style: none;
     width: 100%;
     display: flex;
     justify-content: space-around;
 }
 
-header nav ul li{               /*Definere position af navigationsbar listitem*/
+header nav ul li{                       /*Definere position af navigationsbar listitem*/
     position: relative;
     padding: 0;
 }
 
-header nav ul li a{             /*Styling af links i navigationsbar*/
+header nav ul li a{                     /*Styling af links i navigationsbar*/
     text-decoration: none;
     font-size: 1.55rem;
     padding: 1.5rem;
@@ -162,37 +161,37 @@ header nav ul li a{             /*Styling af links i navigationsbar*/
     background: var(--dark-blue);
 }
 
-header nav ul li a:hover{       /*Styling af navigationsbar under hover tilstand*/
+header nav ul li a:hover{               /*Styling af navigationsbar under hover tilstand*/
     background: var(--light-blue);
     color: var(--orange);
 }
 
-header nav ul li ul{            /*Styling af dropdown menu i navbar*/
+header nav ul li ul{                    /*Styling af dropdown menu i navbar*/
     position: absolute;
     left: 0;
-    width: 100%;                    /*Definere at den skal udfylde hele siden*/
+    width: 100%;                        /*Definere at den skal udfylde hele siden*/
     background: var(--orange);
     display: none;
-    z-index: 10;                    /*Styrer stablingrækkefølge højere værdi ligger øverst, i denne tilfælde ligger alt under ul øverst for alle andre elementer*/
+    z-index: 10;                        /*Styrer stablingrækkefølge højere værdi ligger øverst, i denne tilfælde ligger alt under ul øverst for alle andre elementer*/
 }
 
-header nav ul li ul li{         /*Styling af list item i dropdown menu*/
+header nav ul li ul li{                 /*Styling af list item i dropdown menu*/
     width: 100%;
     border-top: 0.5px solid var(--light-blue);
 }
 
-header nav ul li ul li ul{      /*Styling af nested dropdown menu*/
+header nav ul li ul li ul{              /*Styling af nested dropdown menu*/
     left: 12.5rem;
     top: 0;
 }
 
 header nav ul li:focus-within > ul,
-header nav ul li:hover > ul{     /*Definere display af dropdown menu på hover eller fokus*/
+header nav ul li:hover > ul{            /*Definere display af dropdown menu på hover eller fokus*/
     display: block;
-    z-index: 10;                     /*Styrer stablingrækkefølge højere værdi ligger øverst, i denne tilfælde ligger alt under ul øverst for alle andre elementer*/
+    z-index: 10;                        /*Styrer stablingrækkefølge højere værdi ligger øverst, i denne tilfælde ligger alt under ul øverst for alle andre elementer*/
 }
 
-header::after {                     /*Fjern floats efter header content*/
+header::after {                         /*Fjern floats efter header content*/
     content: "";
     display: table;
     clear: both;
@@ -225,12 +224,12 @@ nav ul.sub-menus a:hover{
 }
 
 #wrapper {
-    min-height: 100%;               /*Definere kontents højde, dette sørge for en sticky footer der reagere med kontentet, dermed forbliver den i bunden af siden under alle forhold*/
+    min-height: 100%;                   /*Definere kontents højde, dette sørge for en sticky footer der reagere med kontentet, dermed forbliver den i bunden af siden under alle forhold*/
     display: flex;
     flex-direction: column;
 }
 
-#top{                             /*Styling for fixed sektionen i højre bund af siden*/
+#top{                                   /*Styling for fixed sektionen i højre bund af siden*/
     color: var(--white);
     background-color: var(--orange);
     position: fixed;
@@ -241,7 +240,7 @@ nav ul.sub-menus a:hover{
     z-index: 9;
 }
 
-#top a{                           /*Styling for links i top*/
+#top a{                                 /*Styling for links i top*/
     color: var(--white);
     text-decoration: none;
     font-family: Arial, Helvetica, sans-serif;
@@ -249,7 +248,7 @@ nav ul.sub-menus a:hover{
 }
 
 
-footer {                            /*Styling for footer*/
+footer {                                /*Styling for footer*/
     background-color: var(--black);
     color: var(--white);
     text-align: center;
@@ -260,30 +259,30 @@ footer {                            /*Styling for footer*/
     align-items: center;
     justify-content: center;
     font-family: big-noodle;
-        z-index: 2;
+    z-index: 2;
 }
 
-footer img{                         /*Styling for logoet under footer*/
+footer img{                             /*Styling for logoet under footer*/
     padding-bottom: 2%;
     width: 25rem;
 }
 
-footer nav ul {                     /*Styling footers navigationsbar*/
+footer nav ul {                         /*Styling footers navigationsbar*/
     padding: 0;
     margin: 0;
     list-style: none;
 }
 
-footer nav ul li {                  /*Styling for list items under footer navigationsbar*/
+footer nav ul li {                      /*Styling for list items under footer navigationsbar*/
     display: inline-block; 
     margin-right: 0.938rem; 
 }
 
-footer nav ul li:last-child {       /* Fjerne margin for den sidste list item i footer*/
+footer nav ul li:last-child {           /* Fjerne margin for den sidste list item i footer*/
     margin-right: 0;
 }
 
-footer nav ul li a {                /* Style for links i footer navigationsbar */
+footer nav ul li a {                    /* Style for links i footer navigationsbar */
     text-decoration: none;
     color: var(--white);
 }

@@ -55,6 +55,7 @@ header section{                         /*Definere placering af logo og search-i
     justify-content: space-between;
     align-items: center;
     background: var(--black);
+    z-index: 10;
 }
 
 header nav {                         /*Bestemt baggrundsfarve for navigationsbar*/
