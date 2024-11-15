@@ -71,7 +71,7 @@ header nav ul{                  /*Styling af navigationsbar*/
 
 header nav ul li{               /*Definere position af navigationsbar listitem*/
     position: relative;
-    padding: 1.5 1.5rem;
+    padding: 1.5rem 1.5rem;
 }
 
 header nav ul li a{             /*Styling af links i navigationsbar*/
