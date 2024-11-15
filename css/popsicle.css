@@ -45,13 +45,15 @@ h1{
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    padding-top: 20rem;
+    padding-top: 25rem;
+    padding-bottom: 10rem;
 }
 
 .ramme img{
     height: auto;
-    padding: 10%;
-    width: 30rem;
+    padding: 8%;
+    width: 25rem;
+    padding-top: 2rem;
 }
 
 .ramme p{
@@ -81,6 +83,7 @@ h3{
 .top{
 position: absolute;
 top: 250px;
+padding-left: 5rem;
 }
 
 header section{                         /*Definere placering af logo og search-icon, dermed baggrundsfarve*/
@@ -100,11 +103,40 @@ header nav{
     background-size:cover;
     background-position:0 -125px ;
     flex-basis: 100%;
+    padding-top: 30.5px;
 }
 header nav ul li a {
     color:white;
     background-color: transparent;
+}
+nav ul li a:hover{
+    color:#fcecdc ;
+    background:#ffbacd;
+}
+nav ul.sub-menus{
+	background: #d1e3f4;
+}
 
+nav ul.sub-menus a {
+	color:#e0869d;
+}
+nav ul.sub-menus a:hover{
+	background: #e0869d;
+	color: #fff4f5;
+}
+footer{
+    font-family: bubblegum;
+    background-color: #ffbacd;
+    height:15rem;
+    color: #fcecdc;
+    text-shadow: 1px 1px #e0869d;
+}
+footer nav ul li a{
+    color: #fcecdc;
+    text-shadow: 1px 1px #e0869d;
+}
+footer img{
+    width: 15rem;
 }
 
 @media (max-width: 1240px){
@@ -141,6 +173,9 @@ header nav ul li a {
     .ramme p{
         font-size: 1.5rem;
     }
+    .ramme{
+        padding-top: 18rem;
+    }
 }
 @media (max-width: 769px){
     h1{
@@ -173,13 +208,15 @@ header nav ul li a {
     }   
 
     .ramme img{
-        width: 10rem;
+        width: 230px;
+        padding: 3%;
     }
 
     .ramme{
         padding-top: 12rem;
+        flex-basis: 20%;
     }
     .ramme p{
-        font-size:1rem;
+        font-size:1.35rem;
     }
 }

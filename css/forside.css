@@ -184,6 +184,73 @@ html, body {
 .phone{
     display: none;
 }
+
+#kort:hover,
+#info:hover,
+#events:hover{
+    color: var(--orange);
+    transform: scale(1.5,1.5);
+    text-shadow: 2px 2px black;
+}
+@keyframes swinging{
+    0%{transform: rotate(0deg);}
+    25%{transform: rotate(10deg) scale(1.2,1.2);}
+    50%{transform: rotate(-5deg) scale(1.2,1.2)}
+    75%{transform: rotate(10deg);}
+    100%{transform: rotate(0deg);}
+}
+#duck:hover, #mormor:hover, #danyar:hover, #popsicle:hover, #everest:hover, #blaa:hover{
+    animation: swinging 3.5s ease-in-out forwards infinite;
+}
+
+#duckp:hover, #mormorp:hover, #danyarp:hover, #popsiclep:hover, #everestp:hover, #blaap:hover{
+    animation: swinging 3.5s ease-in-out forwards infinite;
+}
+    @media(max-width: 1780px){
+        #danyar{
+            width: 300px;
+            bottom: 1040px;
+            right: 950px;
+            position: absolute;
+            z-index: 2;
+        }
+        #mormor{
+            width: 300px;
+            bottom: 365px;
+            right: 550px;
+            position: absolute;
+            z-index: 2;
+        }
+        #duck{
+            width: 300px;
+            bottom: 330px;
+            right: 890px;
+            position: absolute;
+            z-index: 2;
+        }
+        #blaa{
+            width: 300px;
+            bottom: 1290px;
+            right: 610px;
+            position: absolute;
+            z-index: 2;
+        }
+        #everest{
+            width: 300px;
+            bottom: 1450px;
+            right: 250px;
+            position: absolute;
+            z-index: 2;
+        }
+        #popsicle{
+            width: 300px;
+            bottom: 250px;
+            right: 250px;
+            position: absolute;
+            z-index: 2;
+        }  
+    }
+
     @media screen and (max-width: 768px) {
         .grid, .skilt, #kort, #events, #info{
             display: none;
@@ -274,7 +341,7 @@ html, body {
     }
     
     /* Media query for tablet (768px til 1024px) */
-    @media screen and (min-width: 769px) and (max-width: 1024px) {
+    @media screen and (min-width: 769px) and (max-width: 1240px) {
         
         .grid, .skilt, #kort, #events, #info{
             display: none;
