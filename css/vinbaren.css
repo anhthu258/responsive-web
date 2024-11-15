@@ -27,11 +27,6 @@ body{
     justify-content: space-between;
 }
 
-.logo {
-    width: 50px;
-    height: auto;
-}
-
 #logo{
     padding: 0.938rem;
     width: 0.525rem;

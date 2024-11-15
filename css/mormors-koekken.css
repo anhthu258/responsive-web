@@ -63,7 +63,7 @@ header nav ul{                  /*Styling af navigationsbar*/
 
 header nav ul li{               /*Definere position af navigationsbar listitem*/
     position: relative;
-    padding: 1.5rem;
+    padding: 1.5 1.5rem;
 }
 
 header nav ul li a{             /*Styling af links i navigationsbar*/
@@ -72,7 +72,7 @@ header nav ul li a{             /*Styling af links i navigationsbar*/
     padding: 1.5rem;
     color: rgb(255, 255, 255);
     display: block;
-    background: (#432818);
+    background: var(#432818);
 }
 
 header nav ul li a:hover{       /*Styling af navigationsbar under hover tilstand*/
@@ -159,6 +159,7 @@ nav ul.sub-menus a:hover{
     text-decoration: none;
     font-family: serif;
     font-weight: 300;
+    font-style: bold;
 }
 
 footer {                            /*Styling for footer*/
@@ -204,7 +205,7 @@ footer nav ul li a {                /* Style for links i footer navigationsbar *
 .overlay-image {
     width: 70rem; /* Adjust the size as needed */
     margin-top: 0,1rem;
-    padding-left: 20rem;
+    padding-left: 14rem;
 }
   /* Style the background image */
   .background-image {
