@@ -315,24 +315,27 @@ footer nav ul li a {                /* Style for links i footer navigationsbar *
         margin: 0.5rem;
     }
 
-    #logo-danyar-banner{
+    #danyar-banner{
         max-width: 100%;
-        margin: 0 auto
+        margin: 0 auto;
+        top: -4rem;
     }
 
     #logo-danyar{
-        display: none;
+        max-width: 30%;
+        margin: 0 auto;
+        top: 5rem;
     }
 
     h1{
         left: 16%;
         font-size: 3rem;
-        top: 5.2%;
+        top: 7.5%;
     }
 
         .dish-container {
             grid-template-columns: 1fr; /* Single column layout */
-            margin-top: 9rem;
+            margin-top: 14rem;
         }
     
         .dishes {
