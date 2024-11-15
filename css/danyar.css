@@ -10,13 +10,17 @@ main {
     padding-top: 2rem;
 }
 
-#logo-danyar {
+#logo-danyar-banner {
     max-width: 100%;
     position: absolute;
     top: 3rem;
     position: absolute;
     left: 50%;
     transform: translateX(-50%); /* Centers horizontally */
+}
+
+#logo-danyar{
+    display: none;
 }
 
 @font-face {
@@ -38,9 +42,9 @@ h1{
     font-size: 4rem;
     transform: translateX(-50%);
     position: absolute;
-    left: 10%;
+    left: 9%;
     top: 24rem;
-    font-family: chartoon;
+    font-family: big-noodle;
     color: white;
 }
 
@@ -68,13 +72,14 @@ h1{
 .order-button {
     position: absolute;
     bottom: 0.2rem; /* Positions the button at the bottom of the image */
-    left: 71%;
+    left: 70%;
     transform: translateX(-50%);
     background-color: #ff9327;
     color: white;
     font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.3rem;
     z-index: 10;
-    width: 5rem;
+    width: 7rem;
     text-align: center;
     padding: 0.5rem;
     border-radius: 0.25rem;
@@ -308,18 +313,24 @@ footer nav ul li a {                /* Style for links i footer navigationsbar *
         margin: 0.5rem;
     }
 
+    #logo-danyar-banner{
+        max-width: 100%;
+        margin: 0 auto
+    }
+
     #logo-danyar{
-        min-width: 10rem;
+        display: none;
     }
 
     h1{
-        left: 50%;
-        font-size: 5rem;
+        left: 16%;
+        font-size: 3rem;
+        top: 5.2%;
     }
 
         .dish-container {
             grid-template-columns: 1fr; /* Single column layout */
-            margin-top: 28rem;
+            margin-top: 9rem;
         }
     
         .dishes {
@@ -335,9 +346,7 @@ footer nav ul li a {                /* Style for links i footer navigationsbar *
         }
 
     #top {
-        right: 10px;
-        padding: 10px;
-        font-size: 14px;
+        display: none;
     }
 
     footer {
