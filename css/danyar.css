@@ -4,7 +4,7 @@ main {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    background-image: url('../img/danyar-img/ocean-background.webp');
+    background-image: url('../img/danyar-img/baggrund.webp');
     background-size: cover;
     background-position: center;
     padding-top: 2rem;
@@ -57,6 +57,7 @@ h1{
     height: auto;
     border-radius: 0.5rem;
     object-fit: cover;
+    border: #060538 solid 1rem;
 }
 
 .order-button {
@@ -231,7 +232,7 @@ nav ul.sub-menus a:hover{
 #top a{                           /*Styling for links i top*/
     color: var(--white);
     text-decoration: none;
-    font-family: serif;
+    font-family: Arial, Helvetica, sans-serif;
     font-weight: 300;
 }
 
