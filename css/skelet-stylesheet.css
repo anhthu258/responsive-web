@@ -160,7 +160,7 @@ nav ul.sub-menus a:hover{
     padding: 20px;
     font-size: 25px;
     z-index: 9;
-    letter-spacing: 10%;
+    letter-spacing: 10em;
 }
 
 #top a{                           /*Styling for links i top*/

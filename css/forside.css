@@ -203,7 +203,7 @@ html, body {
     animation: swinging 3.5s ease-in-out forwards infinite;
 }
 
-#duckp:hover, #mormorp:hover, #danyarp:hover, #popsiclep:hover, #everestp:hover, #blaap:hover{
+#duckp:hover, #mormorp:hover, #danyarp:hover, #popsiclep:hover, #vinbarp:hover, #blaap:hover{
     animation: swinging 3.5s ease-in-out forwards infinite;
 }
     @media(max-width: 1780px){
@@ -252,6 +252,11 @@ html, body {
     }
     footer{
         font-family: big-noodle;
+        background-color: #000000;
+        color: white;
+    }
+    footer nav ul li a{
+        color: white;
     }
     @media screen and (max-width: 768px) {
         .grid, .skilt, #kort, #events, #info{
