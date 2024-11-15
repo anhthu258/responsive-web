@@ -11,8 +11,7 @@ main {
 }
 
 #logo-danyar {
-    width: 12%;
-    max-width: 12rem;
+    max-width: 100%;
     position: absolute;
     top: 3rem;
     position: absolute;
@@ -36,11 +35,11 @@ main {
     }
 
 h1{
-    font-size: 7rem;
+    font-size: 4rem;
     transform: translateX(-50%);
     position: absolute;
-    left: 13.2%;
-    top: 23rem;
+    left: 10%;
+    top: 24rem;
     font-family: chartoon;
     color: white;
 }
@@ -49,7 +48,8 @@ h1{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     padding: 1.1rem;
-    margin-top: 22rem; /* Adjust this as needed for spacing below header */
+    margin-top: 18rem; /* Adjust this as needed for spacing below header */
+    margin-bottom: 8rem;
 }
 
 .dish-item {
