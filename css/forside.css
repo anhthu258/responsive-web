@@ -35,7 +35,6 @@ html, body {
     right: 0;
 }
 #back-img {
-/*    background-image: url(/img/forsiden/background-update.png);*/
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center right;
