@@ -11,13 +11,14 @@
     padding: 0;
     box-sizing:border-box;
     font-size: 16px;
+    --scale: calc(3rem + 1vh);
 } 
 
 body{
     background-image: url(/img/popsicle/tegnebraet.webp);
     background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+    background-size: contain;
+    background-position: top right;
     background-color: #daebde;
 }
 .head{
@@ -28,150 +29,157 @@ body{
 }
 
 .head img{
-height: 3rem;
+    height: 3rem;
 }
 
 h1{
-    padding-right: 46%;
-    font-size: 3rem;
+    font-size: 5rem;
     color:#fcecdc;
-    text-shadow:#ffbacd ;
-    padding-bottom: 4.5%;
-    padding-top: 1.5%;
+    text-shadow:4px 4px #e0869d;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    font-family: bubblegum;
     }
-h2{
-    padding-top: 3rem;
-    display: flex;
-    align-items: center;
-    justify-content:center;
-}
 .ramme{
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    padding-top: 2rem;
+    padding-top: 20rem;
 }
 
 .ramme img{
     height: auto;
-    padding: 2%;
-
+    padding: 10%;
+    width: 30rem;
 }
 
-@media (max-width: 1560px){
-
-body{
-    background-image: url(/img/popsicle/tegnebraet.webp);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: top right;
-    background-color: #daebde;
-}
-
-.ramme{
+.ramme p{
     display: flex;
-    align-items: center;
     justify-content: center;
+    font-size: 2rem;
+    font-family: bubblegum;
+    color:#fff4f5;
+    text-shadow: 4px 4px #e0869d;
+}
+h2{
+    font-family: big-noodle;
+    font-weight: 100;
+    color: #fcecdc;
+    font-size: 3rem;
+    text-shadow:1px 1px #e0869d ;
+
+}
+h3{
+    font-family: big-noodle;
+    font-weight: 100;
+    color: whitesmoke;
+    font-size: 2rem;
+    text-shadow: 0.5px 0.5px #e0869d;
+
+}
+.top{
+position: absolute;
+top: 250px;
+}
+
+header section{                         /*Definere placering af logo og search-icon, dermed baggrundsfarve*/
+    background-image: url(../img/popsicle/tegnebraet.webp);
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     flex-wrap: wrap;
-    padding-top: 2rem;
-}
-.ramme img{
-    padding: 2%;
 
 }
 
+header nav{
+    color: #fcecdc;
+    background-image: url(../img/popsicle/tegnebraet.webp);
+    background-size:cover;
+    background-position:0 -125px ;
+    flex-basis: 100%;
 }
-@media (max-width: 1360px){
-    *{                              /*Reset alt default setting for margin og padding, dermed definere alle box-sizing til border-box*/
-        margin: 0;
-        padding: 0;
-        box-sizing:border-box;
-        font-size: 16px;
-    } 
+header nav ul li a {
+    color:white;
+    background-color: transparent;
 
-    body{
-        background-image: url(/img/popsicle/tegnebraet.webp);
-        background-repeat: no-repeat;
-        background-size: auto;
-        background-position: top right;
-        background-color: #daebde;
-    }
-    .head{
-        display: flex;
-        font-family: bubblegum;
-        padding-top: 0.5rem;
-    }
+}
 
-    .head img{
-    height: 3rem;
-    }
-
+@media (max-width: 1240px){
     h1{
-        padding-right: 45%;
-        font-size: 3rem;
-        padding-top: 1.5rem;
-        color:#fcecdc;
-        text-shadow:#ffbacd ;
-        }
-    h2{
-        padding-top: 3rem;
-        display: flex;
-        align-items: center;
-        justify-content:center;
+        padding-top: 0;
+        font-size: var(--scale);
     }
+    
+    header nav{
+        background-position: 0 -80px;    
+    }  
+    
+    h2{
+        font-size: 2.5rem;
+
+    }
+    h3{
+        font-size: 1.5rem;
     }
 
-    @media (max-width: 500px){
-        *{                              /*Reset alt default setting for margin og padding, dermed definere alle box-sizing til border-box*/
-            margin: 0;
-            padding: 0;
-            box-sizing:border-box;
-            font-size: 16px;
-        } 
+    .top{
+        top: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .logo{
+        width: 90px;
+    }
+    .ramme img{
+        width: 20rem;
+    }
+    .ramme p{
+        font-size: 1.5rem;
+    }
+}
+@media (max-width: 769px){
+    h1{
+        padding-top: 0;
+        font-size: 2rem;
+    }
     
-        body{
-            background-image: url(/img/popsicle/tegnebraet.webp);
-            background-repeat: no-repeat;
-            background-size: auto;
-            background-position: top right;
-            background-color: #daebde;
-        }
-        .head{
-            display: flex;
-            justify-content: space-between;
-            font-family: bubblegum;
-            padding-top: 0.5rem;
-        }
+    header nav{
+        background-position: 0 -80px;    
+    }  
     
-        .head img{
-        height: 3rem;
-        }
-    
-        h1{
-            padding-right: 37.5%;
-            font-size: 3rem;
-            padding-top: 1.5rem;
-            color:#fcecdc;
-            text-shadow:#ffbacd ;
-            }
-        h2{
-            padding-top: 3rem;
-            display: flex;
-            align-items: center;
-            justify-content:center;
-        }
-        .ramme{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-wrap: wrap;
-            padding-top: 2rem;
-        }
-    
-        .ramme img{
-            height: auto;
-            padding: 2%;
-    
-        }
-        }
+    h2{
+        font-size: 2rem;
+
+    }
+    h3{
+        font-size: 1rem;
+    }
+
+    .top{
+        top: 75px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding-left: 5%;
+    }
+    .logo{
+        width: 50px;
+    }   
+
+    .ramme img{
+        width: 10rem;
+    }
+
+    .ramme{
+        padding-top: 12rem;
+    }
+    .ramme p{
+        font-size:1rem;
+    }
+}
